@@ -2,6 +2,7 @@ import Link from "next/link";
 import MobileMenu from "./MobileMenu";
 import Image from "next/image";
 import clutchLogo from "../../../public/logos/clutch-logo.png";
+import PrimaryLinkButton from "./PrimaryLinkButton";
 
 export default function TheHeader() {
   return (
@@ -12,6 +13,7 @@ export default function TheHeader() {
             src={clutchLogo}
             alt="Clutch Industries"
             className="w-[200px] h-auto"
+            priority
           />
         </Link>
 
@@ -26,7 +28,7 @@ export default function TheHeader() {
           href="/"
           className="hidden lg:flex flex-row lg:w-1/5 justify-end pr-5"
         >
-          <Link href="/contact">Contact</Link>
+          <PrimaryLinkButton linkTo="/contact" buttonText="Contact Us" />
         </div>
         <MobileMenu />
       </nav>

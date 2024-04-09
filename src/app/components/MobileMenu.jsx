@@ -59,8 +59,14 @@ export default function MobileMenu() {
             <Link href="/projects" onClick={toggleMobileMenu}>
               Projects
             </Link>
+            <Link href="/investments" onClick={toggleMobileMenu}>
+              Investments
+            </Link>
+            <Link href="/management" onClick={toggleMobileMenu}>
+              Management
+            </Link>
             <Link href="/contact" onClick={toggleMobileMenu}>
-              Contact
+              Contact Us
             </Link>
           </div>
         </div>
