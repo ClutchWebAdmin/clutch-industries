@@ -7,10 +7,19 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        clutchBlue: {
+          50: "#e1e3f5",
+          100: "#c2c6eb",
+          200: "#a0a7e0",
+          300: "#7d88d5",
+          400: "#5c6bca",
+          500: "#3A4AAA",
+          600: "#2e3f8e",
+          700: "#253575",
+          800: "#1b275b",
+          900: "#111940",
+        },
       },
     },
   },

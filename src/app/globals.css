@@ -3,31 +3,46 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-hex: #00000;
+  --background-hex: #ffffff;
+  --header-height: 80px;
+  --footer-height: 300px;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-hex: #ffffff;
+    --background-hex: #000000;
   }
+} */
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--foreground-hex);
+  background: var(--background-hex);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+header {
+  height: var(--header-height);
+}
+
+main {
+  margin-bottom: var(--footer-height);
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.hero-height-helper {
+  margin-top: calc(-1 * var(--header-height));
+}
+
+footer {
+  height: var(--footer-height);
 }
