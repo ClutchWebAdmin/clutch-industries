@@ -48,16 +48,13 @@ export default function MobileMenu() {
       )}
 
       {isMobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 bg-clutchBlue-900 text-white bg-opacity-95 z-[9000] animate__animated animate__slideInDown">
+        <div className="lg:hidden fixed inset-0 bg-clutchBlue-900 text-white font-medium uppercase bg-opacity-95 z-[9000] animate__animated animate__slideInDown">
           <div className="flex flex-col h-full justify-center space-y-12 items-center">
             <Link href="/" onClick={toggleMobileMenu}>
               Home
             </Link>
-            <Link href="/about" onClick={toggleMobileMenu}>
-              About
-            </Link>
-            <Link href="/projects" onClick={toggleMobileMenu}>
-              Projects
+            <Link href="/construction" onClick={toggleMobileMenu}>
+              Construction
             </Link>
             <Link href="/investments" onClick={toggleMobileMenu}>
               Investments

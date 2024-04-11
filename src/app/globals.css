@@ -25,9 +25,9 @@ body {
   background: var(--background-hex);
 }
 
-header {
+/* header {
   height: var(--header-height);
-}
+} */
 
 main {
   margin-bottom: var(--footer-height);

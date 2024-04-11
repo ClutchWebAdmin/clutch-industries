@@ -6,7 +6,11 @@ export default function TheFooter() {
   return (
     <footer className="absolute bottom-0 left-0 p-5 w-full bg-clutchBlue-900">
       <Link href="/">
-        <Image src={clutchLogo} alt="Clutch Industries" className="lg:w-1/4" />
+        <Image
+          src={clutchLogo}
+          alt="Clutch Industries"
+          className="w-[200px] h-auto"
+        />
       </Link>
     </footer>
   );

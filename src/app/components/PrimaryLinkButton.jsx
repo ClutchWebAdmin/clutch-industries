@@ -4,7 +4,7 @@ export default function PrimaryLinkButton({ linkTo, buttonText }) {
   return (
     <Link
       href={linkTo}
-      className="uppercase bg-clutchBlue-600 hover:bg-clutchBlue-500 transition duration-300 text-white font-medium min-w-fit min-h-fit px-6 py-3"
+      className="bg-clutchBlue-600 border-2 border-transparent hover:border-2 hover:border-clutchBlue-600 hover:bg-white transition duration-300 text-white hover:text-clutchBlue-600 uppercase font-medium w-fit h-fit px-6 py-3"
     >
       {buttonText}
     </Link>
