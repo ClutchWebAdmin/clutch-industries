@@ -28,6 +28,25 @@ export const whatWeDoArray = [
   },
 ];
 
+export const ourProjectsArray = [
+  {
+    text: "All Projects",
+    linkTo: "/projects",
+  },
+  {
+    text: "Completed Projects",
+    linkTo: "/projects/#completed",
+  },
+  {
+    text: "Current Projects",
+    linkTo: "/projects/#current",
+  },
+  {
+    text: "Upcoming Projects",
+    linkTo: "/projects/#upcoming",
+  },
+];
+
 export const mobileArray = [
   {
     text: "Home",

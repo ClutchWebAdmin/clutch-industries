@@ -2,7 +2,11 @@ import Link from "next/link";
 import MobileMenu from "../MobileMenu";
 import NavDropdown from "../Dropdowns/NavDropdown";
 import ClutchLogoSVG from "../Logos/ClutchLogoSVG";
-import { whatWeDoArray, whoWeAreArray } from "../NavItems/NavItems";
+import {
+  ourProjectsArray,
+  whatWeDoArray,
+  whoWeAreArray,
+} from "../NavItems/NavItems";
 import PrimaryLinkButton from "../Buttons/PrimaryLinkButton";
 
 export default function TheHeader() {
@@ -21,6 +25,10 @@ export default function TheHeader() {
           <NavDropdown
             dropdownArray={whatWeDoArray}
             mainLinkText="What We Do"
+          />
+          <NavDropdown
+            dropdownArray={ourProjectsArray}
+            mainLinkText="Our Projects"
           />
         </div>
 

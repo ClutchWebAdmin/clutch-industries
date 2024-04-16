@@ -1,3 +1,7 @@
 export default function ContactPage() {
-  return <main>Contact Page</main>;
+  return (
+    <main>
+      <section className="h-svh border">Contact Form</section>
+    </main>
+  );
 }

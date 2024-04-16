@@ -1,9 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
+import { FaArrowRight } from "react-icons/fa6";
 
-export default function ServicesDrawer({ service, description }) {
+export default function ServicesDrawer({ service, description, linkTo }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDrawer = () => {
@@ -27,13 +29,20 @@ export default function ServicesDrawer({ service, description }) {
         </button>
       </div>
       <div
-        className={`overflow-hidden max-h-0 transition-all duration-700 ${
+        className={`flex flex-col gap-6 overflow-hidden max-h-0 transition-all duration-700 ${
           isOpen ? "max-h-screen" : ""
         }`}
       >
-        <div className="pb-6">
-          <p className="text-clutchBlue-100">{description}</p>
+        <div className="">
+          <p>{description}</p>
         </div>
+        <Link
+          href={linkTo}
+          className="flex flex-row items-center gap-2 mb-6 w-fit ml-auto text-clutchBlue-100 hover:underline hover:underline-offset-[6px]"
+        >
+          Learn more
+          <FaArrowRight />
+        </Link>
       </div>
     </div>
   );

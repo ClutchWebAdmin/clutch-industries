@@ -35,7 +35,7 @@ export default function NavDropdown({ mainLinkText, dropdownArray }) {
         </div>
       </button>
       {showDropdown && (
-        <div className="absolute top-full left-0 bg-white/5 backdrop-blur-md p-2">
+        <div className="absolute top-full left-0 bg-white shadow-md p-2">
           <div className="flex flex-col w-[180px]">
             {dropdownArray.map((item, index) => (
               <Link

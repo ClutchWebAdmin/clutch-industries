@@ -2,7 +2,11 @@ import Link from "next/link";
 import MobileMenu from "../MobileMenu";
 import SecondaryLinkButton from "../Buttons/SecondaryLinkButton";
 import ClutchLogoSVG from "../Logos/ClutchLogoSVG";
-import { whatWeDoArray, whoWeAreArray } from "../NavItems/NavItems";
+import {
+  whatWeDoArray,
+  whoWeAreArray,
+  ourProjectsArray,
+} from "../NavItems/NavItems";
 import TheHomeNavDropdown from "../Dropdowns/TheHomeNavDropdown";
 
 export default function TheHomeHeader() {
@@ -21,6 +25,10 @@ export default function TheHomeHeader() {
           <TheHomeNavDropdown
             dropdownArray={whatWeDoArray}
             mainLinkText="What We Do"
+          />
+          <TheHomeNavDropdown
+            dropdownArray={ourProjectsArray}
+            mainLinkText="Our Projects"
           />
         </div>
 
