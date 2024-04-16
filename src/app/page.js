@@ -3,7 +3,7 @@ import ServicesDrawer from "./components/ServicesDrawer";
 import Image from "next/image";
 import teamPhoto from "../../public/images/clutch-team-photo.png";
 import PrimaryLinkButton from "./components/Buttons/PrimaryLinkButton";
-import TheHeaderLight from "./components/Headers/TheHeaderLight";
+import TheHomeHeader from "./components/Headers/TheHomeHeader";
 
 export const metadata = {
   title: "Clutch Industries",
@@ -34,34 +34,10 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <TheHeaderLight />
+      <TheHomeHeader />
       <main>
         <section className="h-svh relative">
           <Hero />
-        </section>
-
-        <section
-          id="what-we-do"
-          className="flex flex-col gap-6 lg:flex-row h-fit text-white bg-clutchBlue-900 px-5 lg:px-10 py-10 lg:py-20"
-        >
-          <div className="flex flex-col w-full lg:w-1/2">
-            <h2 className="text-4xl md:text-7xl 2xl:text-8xl">What We Do</h2>
-          </div>
-
-          <div className="flex flex-col w-full lg:w-1/2">
-            <ServicesDrawer
-              service="Construction"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sapien pellentesque habitant morbi tristique. Amet cursus sit amet dictum sit amet justo donec."
-            />
-            <ServicesDrawer
-              service="Investment"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sapien pellentesque habitant morbi tristique. Amet cursus sit amet dictum sit amet justo donec."
-            />
-            <ServicesDrawer
-              service="Management"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sapien pellentesque habitant morbi tristique. Amet cursus sit amet dictum sit amet justo donec."
-            />
-          </div>
         </section>
 
         <section
@@ -80,8 +56,35 @@ export default function Home() {
                 Sapien pellentesque habitant morbi tristique. Amet cursus sit
                 amet dictum sit amet justo donec.
               </p>
-              <PrimaryLinkButton buttonText="Meet the team" linkTo={"/team"} />
+              <PrimaryLinkButton
+                buttonText="Meet the team"
+                linkTo={"/who-we-are/team"}
+              />
             </div>
+          </div>
+        </section>
+
+        <section
+          id="what-we-do"
+          className="flex flex-col gap-6 lg:flex-row h-fit text-white bg-clutchBlue-900 px-5 lg:px-10 py-10 lg:py-20"
+        >
+          <div className="flex flex-col w-full lg:w-1/2">
+            <h2 className="text-4xl md:text-7xl 2xl:text-8xl">Our Services</h2>
+          </div>
+
+          <div className="flex flex-col w-full lg:w-1/2">
+            <ServicesDrawer
+              service="Construction"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sapien pellentesque habitant morbi tristique. Amet cursus sit amet dictum sit amet justo donec."
+            />
+            <ServicesDrawer
+              service="Investment"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sapien pellentesque habitant morbi tristique. Amet cursus sit amet dictum sit amet justo donec."
+            />
+            <ServicesDrawer
+              service="Management"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sapien pellentesque habitant morbi tristique. Amet cursus sit amet dictum sit amet justo donec."
+            />
           </div>
         </section>
 

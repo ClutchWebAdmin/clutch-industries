@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { IoChevronDownSharp, IoChevronUpSharp } from "react-icons/io5";
 
-export default function NavDropdownLight({ mainLinkText, dropdownArray }) {
+export default function NavDropdown({ mainLinkText, dropdownArray }) {
   const [showDropdown, setShowDropdown] = useState(false);
 
   const togglePropertiesDropdown = () => {
@@ -27,7 +27,7 @@ export default function NavDropdownLight({ mainLinkText, dropdownArray }) {
     >
       <button
         onClick={togglePropertiesDropdown}
-        className=" hover:text-clutchBlue-200 flex flex-row items-center gap-2 p-2"
+        className=" hover:text-clutchBlue-500 flex flex-row items-center gap-2 p-2"
       >
         {mainLinkText}
         <div>
@@ -41,7 +41,7 @@ export default function NavDropdownLight({ mainLinkText, dropdownArray }) {
               <Link
                 key={index}
                 href={item.linkTo}
-                className="border border-transparent hover:border hover:border-clutchBlue-200 hover:text-clutchBlue-100 p-2"
+                className="border border-transparent hover:border hover:border-clutchBlue-500 hover:text-clutchBlue-500 p-2"
               >
                 {item.text}
               </Link>
