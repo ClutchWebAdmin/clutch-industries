@@ -11,7 +11,7 @@ export default function Hero() {
         className="object-cover brightness-[.4]"
         fill
       />
-      <div className="absolute z-30 w-full h-screen flex justify-start p-5 lg:p-10 items-end">
+      <div className="absolute z-30 w-full h-svh flex justify-start p-5 lg:p-10 items-end">
         <div className="flex flex-col gap-4 animate__animated animate__fadeInUp text-white">
           <h1 className="flex md:hidden text-3xl leading-normal font-medium">
             Your full service
