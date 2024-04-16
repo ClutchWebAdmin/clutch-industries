@@ -6,7 +6,7 @@
   --foreground-hex: #00000;
   --background-hex: #ffffff;
   --header-height: 80px;
-  --footer-height: 300px;
+  --footer-height: 350px;
 }
 
 /* @media (prefers-color-scheme: dark) {

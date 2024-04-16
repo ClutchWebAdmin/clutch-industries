@@ -1,6 +1,6 @@
 import Image from "next/image";
 import heroImage from "../../../public/images/hero-image.webp";
-import SecondaryLinkButton from "./SecondaryLinkButton";
+import SecondaryLinkButton from "./Buttons/SecondaryLinkButton";
 
 export default function Hero() {
   return (
