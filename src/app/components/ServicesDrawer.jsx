@@ -38,10 +38,10 @@ export default function ServicesDrawer({ service, description, linkTo }) {
         </div>
         <Link
           href={linkTo}
-          className="flex flex-row items-center gap-2 mb-6 w-fit ml-auto text-clutchBlue-100 hover:text-clutchBlue-200 hover:-translate-x-2 transition duration-300"
+          className="flex flex-row items-center gap-2 mb-6 w-fit ml-auto text-clutchBlue-50 hover:text-clutchBlue-200 hover:-translate-x-2 transition duration-300"
         >
           Learn more
-          <FaArrowRight />
+          <FaArrowRight className="text-xs" />
         </Link>
       </div>
     </div>
