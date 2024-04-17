@@ -21,13 +21,13 @@ export default function TheHomeNavDropdown({ mainLinkText, dropdownArray }) {
 
   return (
     <div
-      className="relative font-medium "
+      className="relative font-medium"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       <button
         onClick={togglePropertiesDropdown}
-        className=" hover:text-clutchBlue-200 flex flex-row items-center gap-2 p-2"
+        className=" hover:text-clutchBlue-200 flex flex-row items-center gap-2 p-2 uppercase"
       >
         {mainLinkText}
         <div>

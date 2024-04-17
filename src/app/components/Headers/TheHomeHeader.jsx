@@ -11,7 +11,7 @@ import TheHomeNavDropdown from "../Dropdowns/TheHomeNavDropdown";
 
 export default function TheHomeHeader() {
   return (
-    <header className="absolute flex flex-row w-full z-50 text-clutchBlue-50">
+    <header className="absolute flex flex-row w-full z-50 text-white">
       <nav className="flex flex-row w-full h-fit lg:items-center justify-between m-5">
         <Link href="/" className="lg:w-1/5 flex-grow">
           <ClutchLogoSVG color1="#FFFFFF" color2="#a0a7e0" />

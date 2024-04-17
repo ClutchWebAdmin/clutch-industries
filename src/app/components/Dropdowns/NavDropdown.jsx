@@ -21,7 +21,7 @@ export default function NavDropdown({ mainLinkText, dropdownArray }) {
 
   return (
     <div
-      className="relative font-medium "
+      className="relative font-medium"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
