@@ -2,9 +2,9 @@ import Link from "next/link";
 import ClutchLogoSVG from "./Logos/ClutchLogoSVG";
 import {
   FaFacebook,
+  FaInstagram,
   FaLinkedin,
   FaLocationDot,
-  FaPinterest,
   FaTwitter,
 } from "react-icons/fa6";
 import { FaPhone } from "react-icons/fa";
@@ -19,10 +19,10 @@ export default function TheFooter() {
   return (
     <footer
       id="footer"
-      className="flex-shrink-0 justify-between px-5 lg:px-10 pt-8 lg:pt-14 pb-4 w-full bg-clutchBlue-900 text-clutchBlue-50 h-fit"
+      className="flex-shrink-0 justify-between px-5 lg:px-10 pt-12 lg:pt-14 pb-4 w-full bg-clutchBlue-900 text-white h-fit"
     >
-      <div className="grid gap-12 lg:gap-x-0 lg:gap-y-12 grid-cols-1 lg:grid-cols-4 w-fit lg:w-full mx-auto">
-        <div className="flex flex-col gap-10 justify-between col-span-1">
+      <div className="grid gap-12 lg:gap-x-0 lg:gap-y-12 grid-cols-2 lg:grid-cols-4 w-fit lg:w-full mx-auto">
+        <div className="flex flex-col gap-10 justify-between col-span-2 lg:col-span-1">
           <Link href="/">
             <ClutchLogoSVG color1="#FFFFFF" color2="#7d88d5" />
           </Link>
@@ -62,37 +62,40 @@ export default function TheFooter() {
 
           <div className="text-3xl flex flex-row gap-5">
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/clutch-industries-inc/"
               className="hover:text-clutchBlue-200"
               target="_blank"
             >
               <FaLinkedin />
             </a>
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/Clutch.Industries.Oregon/"
               className="hover:text-clutchBlue-200"
               target="_blank"
             >
               <FaFacebook />
             </a>
             <a
-              href="https://twitter.com"
+              href="https://twitter.com/clutch90588373"
               className="hover:text-clutchBlue-200"
               target="_blank"
             >
               <FaTwitter />
             </a>
             <a
-              href="https://pinterest.com"
+              href="https://www.instagram.com/theclutchindustries/"
               className="hover:text-clutchBlue-200"
               target="_blank"
             >
-              <FaPinterest />
+              <FaInstagram />
             </a>
           </div>
         </div>
-        <div className="flex flex-col gap-3 col-span-1">
-          <p className="text-xl font-medium">Who We Are</p>
+
+        <div className="flex flex-col gap-y-3 col-span-1 lg:mx-auto">
+          <p className="text-xl font-medium uppercase text-clutchBlue-300">
+            Who We Are
+          </p>
           <ul className="flex flex-col gap-2">
             {whoWeAreArray.map((item, index) => (
               <li key={index}>
@@ -103,8 +106,11 @@ export default function TheFooter() {
             ))}
           </ul>
         </div>
-        <div className="flex flex-col gap-3 col-span-1">
-          <p className="text-xl font-medium">What We Do</p>
+
+        <div className="flex flex-col gap-y-3 col-span-1 lg:mx-auto">
+          <p className="text-xl font-medium uppercase text-clutchBlue-300">
+            What We Do
+          </p>
           <ul className="flex flex-col gap-2">
             {whatWeDoArray.map((item, index) => (
               <li key={index}>
@@ -115,8 +121,11 @@ export default function TheFooter() {
             ))}
           </ul>
         </div>
-        <div className="flex flex-col gap-3 col-span-1">
-          <p className="text-xl font-medium">Our Projects</p>
+
+        <div className="flex flex-col gap-y-3 col-span-2 lg:col-span-1 lg:mx-auto">
+          <p className="text-xl font-medium uppercase text-clutchBlue-300">
+            Our Projects
+          </p>
           <ul className="flex flex-col gap-2">
             {ourProjectsArray.map((item, index) => (
               <li key={index}>
