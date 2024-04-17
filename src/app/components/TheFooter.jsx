@@ -137,7 +137,7 @@ export default function TheFooter() {
           </ul>
         </div>
 
-        <div className="col-span-full text-center">
+        <div className="col-span-full text-center text-xs">
           © 2024 Clutch Industries
         </div>
       </div>
