@@ -6,7 +6,6 @@ import teamPhoto from "../../public/images/clutch-team-photo.png";
 import PrimaryLinkButton from "./components/Buttons/PrimaryLinkButton";
 import TheHomeHeader from "./components/Headers/TheHomeHeader";
 import SecondaryLinkButton from "./components/Buttons/SecondaryLinkButton";
-import StatsComponent from "./components/StatsSection";
 import StatsSection from "./components/StatsSection";
 
 export const metadata = {
@@ -64,7 +63,7 @@ export default function Home() {
               </p>
               <PrimaryLinkButton
                 buttonText="Meet the team"
-                linkTo={"/who-we-are/team"}
+                linkTo={"/who-we-are/#team"}
               />
             </div>
           </div>
@@ -104,7 +103,7 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row justify-between w-full">
             <Link
               href="/projects/#completed"
-              className="flex w-full lg:w-1/3 bg-gray-400 hover:brightness-105 h-[500px] p-5"
+              className="flex w-full lg:w-1/3 bg-gray-400 hover:brightness-105 h-[350px] lg:h-[500px] p-5"
             >
               <h4 className="text-2xl font-medium text-white">
                 Completed Projects
@@ -112,7 +111,7 @@ export default function Home() {
             </Link>
             <Link
               href="/projects/#current"
-              className="flex w-full lg:w-1/3 bg-gray-500 hover:brightness-105 h-[500px] p-5"
+              className="flex w-full lg:w-1/3 bg-gray-500 hover:brightness-105 h-[350px] lg:h-[500px] p-5"
             >
               <h4 className="text-2xl font-medium text-white">
                 Current Projects
@@ -120,7 +119,7 @@ export default function Home() {
             </Link>
             <Link
               href="/projects/#upcoming"
-              className="flex w-full lg:w-1/3 bg-gray-600 hover:brightness-105 h-[500px] p-5"
+              className="flex w-full lg:w-1/3 bg-gray-600 hover:brightness-105 h-[350px] lg:h-[500px] p-5"
             >
               <h4 className="text-2xl font-medium text-white">
                 Upcoming Projects
@@ -131,12 +130,12 @@ export default function Home() {
 
         <section
           id="contact"
-          className="flex flex-col gap-6 lg:gap-10 h-fit px-5 lg:px-10 py-10 lg:py-20 bg-clutchBlue-800 text-white"
+          className="flex flex-col gap-6 h-fit px-5 lg:px-10 py-20 text-clutchBlue-800 justify-center items-center"
         >
-          <h2 className="text-4xl md:text-7xl 2xl:text-8xl">
+          <h2 className="text-3xl md:text-7xl 2xl:text-8xl">
             Want to work with us?
           </h2>
-          <SecondaryLinkButton buttonText="Get in touch" linkTo="/contact" />
+          <PrimaryLinkButton buttonText="Get in touch" linkTo="/contact" />
         </section>
       </main>
     </>
