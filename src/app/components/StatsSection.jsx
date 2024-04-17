@@ -63,7 +63,7 @@ export default function StatsSection() {
       className="grid grid-cols-1 lg:grid-cols-3 text-white h-fit"
     >
       <div className="bg-clutchBlue-800 col-span-1 flex flex-row">
-        <div className="flex w-[5%] bg-gray-800"></div>
+        <div className="flex w-8 bg-gray-800"></div>
         <div className=" flex flex-col justify-between w-full">
           <div className="flex flex-grow flex-col gap-2 px-4 py-6 justify-center ">
             <h3 className="text-lg font-semibold">Projects Completed</h3>
@@ -72,12 +72,12 @@ export default function StatsSection() {
             </p>
           </div>
 
-          <div className="h-4 w-full bg-gray-700"></div>
+          <div className="h-2 w-full bg-gray-700"></div>
         </div>
       </div>
 
       <div className="bg-clutchBlue-700 col-span-1 flex flex-row">
-        <div className="flex w-[5%] bg-gray-600"></div>
+        <div className="flex w-8 bg-gray-600"></div>
         <div className=" flex flex-col justify-between w-full">
           <div className="flex flex-grow flex-col gap-2 px-4 py-6 justify-center ">
             <h3 className="text-lg font-semibold">Square Footage</h3>
@@ -86,19 +86,19 @@ export default function StatsSection() {
             </p>
           </div>
 
-          <div className="h-4 w-full bg-gray-500"></div>
+          <div className="h-2 w-full bg-gray-500"></div>
         </div>
       </div>
 
       <div className="bg-clutchBlue-600 col-span-1 flex flex-row">
-        <div className="flex w-[5%] bg-gray-400"></div>
+        <div className="flex w-8 bg-gray-400"></div>
         <div className=" flex flex-col justify-between w-full">
           <div className="flex flex-grow flex-col gap-2 px-4 py-6 justify-center ">
             <h3 className="text-lg font-semibold">Placeholder</h3>
             <p className="text-6xl">{placeholder}</p>
           </div>
 
-          <div className="h-4 w-full bg-gray-300"></div>
+          <div className="h-2 w-full bg-gray-300"></div>
         </div>
       </div>
     </section>
