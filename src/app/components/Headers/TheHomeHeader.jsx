@@ -21,14 +21,17 @@ export default function TheHomeHeader() {
           <TheHomeNavDropdown
             dropdownArray={whoWeAreArray}
             mainLinkText="Who We Are"
+            linkTo="/who-we-are"
           />
           <TheHomeNavDropdown
             dropdownArray={whatWeDoArray}
             mainLinkText="What We Do"
+            linkTo="/what-we-do"
           />
           <TheHomeNavDropdown
             dropdownArray={ourProjectsArray}
             mainLinkText="Our Projects"
+            linkTo="/projects"
           />
         </div>
 

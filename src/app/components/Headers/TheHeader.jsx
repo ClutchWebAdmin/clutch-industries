@@ -21,14 +21,17 @@ export default function TheHeader() {
           <NavDropdown
             dropdownArray={whoWeAreArray}
             mainLinkText="Who We Are"
+            linkTo="/who-we-are"
           />
           <NavDropdown
             dropdownArray={whatWeDoArray}
             mainLinkText="What We Do"
+            linkTo="/what-we-do"
           />
           <NavDropdown
             dropdownArray={ourProjectsArray}
             mainLinkText="Our Projects"
+            linkTo="/projects"
           />
         </div>
 
