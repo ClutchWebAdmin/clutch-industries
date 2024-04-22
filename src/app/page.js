@@ -2,11 +2,10 @@ import Hero from "./components/Hero";
 import ServicesDrawer from "./components/ServicesDrawer";
 import Link from "next/link";
 import teamPhoto from "../../public/images/clutch-team-photo.png";
-import PrimaryLinkButton from "./components/Buttons/PrimaryLinkButton";
 import TheHomeHeader from "./components/Headers/TheHomeHeader";
 import StatsSection from "./components/StatsSection";
 import PhotoLeftTextRightSection from "./components/PhotoLeftTextRightSection";
-import PhotoRightTextLeftSection from "./components/PhotoRightTextLeftSection";
+import TextAndLinkSection from "./components/TextAndLinkSection";
 
 export const metadata = {
   title: "Clutch Industries",
@@ -56,6 +55,7 @@ export default function Home() {
           amet dictum sit amet justo donec."
           buttonText="About Us"
           linkTo="/who-we-are"
+          variant="light"
         />
 
         <section
@@ -117,15 +117,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section
+        <TextAndLinkSection
           id="contact"
-          className="flex flex-col gap-6 h-fit px-5 lg:px-10 py-20 text-clutchBlue-800 justify-center items-center"
-        >
-          <h2 className="text-3xl md:text-7xl 2xl:text-8xl">
-            Want to work with us?
-          </h2>
-          <PrimaryLinkButton buttonText="Get in touch" linkTo="/contact" />
-        </section>
+          heading="Want to work with us?"
+          buttonText="Get in touch"
+          linkTo="/contact"
+          variant="light"
+        />
       </main>
     </>
   );
