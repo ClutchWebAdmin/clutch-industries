@@ -4,12 +4,12 @@ export const whoWeAreArray = [
     linkTo: "/who-we-are",
   },
   {
-    text: "Our Team",
-    linkTo: "/who-we-are/#team",
-  },
-  {
     text: "History",
     linkTo: "/who-we-are/#history",
+  },
+  {
+    text: "Our Team",
+    linkTo: "/who-we-are/#team",
   },
 ];
 
@@ -53,12 +53,12 @@ export const mobileArray = [
     linkTo: "/",
   },
   {
-    text: "Our Team",
-    linkTo: "/who-we-are/team",
-  },
-  {
     text: "History",
     linkTo: "/who-we-are/history",
+  },
+  {
+    text: "Our Team",
+    linkTo: "/who-we-are/team",
   },
   {
     text: "Construction",
@@ -71,5 +71,9 @@ export const mobileArray = [
   {
     text: "Management",
     linkTo: "/what-we-do/#management",
+  },
+  {
+    text: "Our Projects",
+    linkTo: "/projects",
   },
 ];
