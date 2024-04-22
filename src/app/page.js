@@ -54,8 +54,8 @@ export default function Home() {
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Sapien pellentesque habitant morbi tristique. Amet cursus sit
           amet dictum sit amet justo donec."
-          buttonText="Meet the team"
-          linkTo="/who-we-are/#team"
+          buttonText="About Us"
+          linkTo="/who-we-are"
         />
 
         <section
