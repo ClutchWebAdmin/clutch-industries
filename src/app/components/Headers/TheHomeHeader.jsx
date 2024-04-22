@@ -6,7 +6,7 @@ import {
   whatWeDoArray,
   whoWeAreArray,
   ourProjectsArray,
-} from "../NavItems/NavItems";
+} from "../../data/NavItems";
 import TheHomeNavDropdown from "../Dropdowns/TheHomeNavDropdown";
 
 export default function TheHomeHeader() {

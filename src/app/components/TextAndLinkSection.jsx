@@ -22,7 +22,7 @@ export default function TextAndLinkSection({
     return (
       <section
         id={id}
-        className={`flex flex-col gap-6 h-fit px-5 lg:px-10 py-20 text-white bg-clutchBlue-900 justify-center items-center`}
+        className={`flex flex-col gap-6 h-fit px-5 lg:px-10 py-20 text-white bg-clutchBlue-700 justify-center items-center`}
       >
         <h5 className="text-3xl md:text-7xl 2xl:text-8xl">{heading}</h5>
         <SecondaryLinkButton buttonText={buttonText} linkTo={linkTo} />

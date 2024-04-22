@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
-import { mobileArray } from "./NavItems/NavItems";
+import { mobileArray } from "../data/NavItems";
 
 export default function MobileMenu() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);

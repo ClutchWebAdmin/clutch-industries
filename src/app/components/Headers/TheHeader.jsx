@@ -6,7 +6,7 @@ import {
   ourProjectsArray,
   whatWeDoArray,
   whoWeAreArray,
-} from "../NavItems/NavItems";
+} from "../../data/NavItems";
 import PrimaryLinkButton from "../Buttons/PrimaryLinkButton";
 
 export default function TheHeader() {

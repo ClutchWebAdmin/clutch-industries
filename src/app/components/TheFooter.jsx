@@ -13,7 +13,7 @@ import {
   ourProjectsArray,
   whatWeDoArray,
   whoWeAreArray,
-} from "./NavItems/NavItems";
+} from "../data/NavItems";
 
 export default function TheFooter() {
   return (
