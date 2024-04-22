@@ -1,12 +1,12 @@
 import Hero from "./components/Hero";
 import ServicesDrawer from "./components/ServicesDrawer";
-import Image from "next/image";
 import Link from "next/link";
 import teamPhoto from "../../public/images/clutch-team-photo.png";
 import PrimaryLinkButton from "./components/Buttons/PrimaryLinkButton";
 import TheHomeHeader from "./components/Headers/TheHomeHeader";
-import SecondaryLinkButton from "./components/Buttons/SecondaryLinkButton";
 import StatsSection from "./components/StatsSection";
+import PhotoLeftTextRightSection from "./components/PhotoLeftTextRightSection";
+import PhotoRightTextLeftSection from "./components/PhotoRightTextLeftSection";
 
 export const metadata = {
   title: "Clutch Industries",
@@ -45,29 +45,18 @@ export default function Home() {
 
         <StatsSection />
 
-        <section
+        <PhotoLeftTextRightSection
           id="about-us"
-          className="flex flex-col gap-6 lg:gap-10 lg:flex-row h-fit text-clutchBlue-900 px-5 lg:px-10 py-10 lg:py-20"
-        >
-          <div className="flex w-full lg:w-1/2">
-            <Image src={teamPhoto} alt="Team photo" />
-          </div>
-          <div className="flex flex-col gap-6 w-full lg:w-1/2">
-            <h2 className="text-4xl md:text-7xl 2xl:text-8xl">Our Team</h2>
-            <div className="flex flex-col gap-6">
-              <p className="text-gray-500">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Sapien pellentesque habitant morbi tristique. Amet cursus sit
-                amet dictum sit amet justo donec.
-              </p>
-              <PrimaryLinkButton
-                buttonText="Meet the team"
-                linkTo={"/who-we-are/#team"}
-              />
-            </div>
-          </div>
-        </section>
+          photoUrl={teamPhoto}
+          altText="Team photo"
+          heading="Our Team"
+          paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Sapien pellentesque habitant morbi tristique. Amet cursus sit
+          amet dictum sit amet justo donec."
+          buttonText="Meet the team"
+          linkTo="/who-we-are/#team"
+        />
 
         <section
           id="what-we-do"
