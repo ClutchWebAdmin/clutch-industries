@@ -1,7 +1,9 @@
 export default function ProjectsPage() {
   return (
     <main>
-      Projects Page
+      <section id="overview" className="border h-[300px]">
+        Overview & Filter Section
+      </section>
       <section id="completed" className="border h-svh">
         Completed Projects
       </section>

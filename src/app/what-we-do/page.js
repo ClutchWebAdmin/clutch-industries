@@ -1,7 +1,6 @@
 export default function WhatWeDoPage() {
   return (
     <main>
-      What We Do Page
       <section id="overview" className="border h-svh">
         Overview Section
       </section>
