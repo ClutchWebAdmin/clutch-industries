@@ -26,7 +26,6 @@ export default function WhoWeArePage() {
         heading="Want to work with us?"
         buttonText="Get in touch"
         linkTo="/contact"
-        textColor="clutchBlue-800"
         variant="light"
       />
     </main>
