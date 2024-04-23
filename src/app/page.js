@@ -52,10 +52,7 @@ export default function Home() {
           photoUrl={teamPhoto}
           altText="Team photo"
           heading="Our Team"
-          paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Sapien pellentesque habitant morbi tristique. Amet cursus sit
-          amet dictum sit amet justo donec."
+          paragraph="We are a team-driven company, motivated by the early challenges of projects that helped show us how effective a highly-aligned, well-chosen team (subcontractors, project managers, architects, land development) can be. We have built an amazing team to understand the challenges and changes, and we believe there is no other team in the Willamette Valley that has our skill set. We are looking forward to more opportunities and potential partners, projects, and development within our community."
           buttonText="About Us"
           linkTo="/who-we-are"
           variant="light"
@@ -72,17 +69,17 @@ export default function Home() {
           <div className="flex flex-col w-full lg:w-1/2">
             <ServicesDrawer
               service="Construction"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sapien pellentesque habitant morbi tristique. Amet cursus sit amet dictum sit amet justo donec."
+              description="We focus on adaptive reuse, flex warehouse, and full multi-family construction from land acquisition to occupancy in the Willamette Valley and the surrounding area. We currently have more than 500 multifamily units planned over the next three years."
               linkTo="/what-we-do/#construction"
             />
             <ServicesDrawer
               service="Investment"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sapien pellentesque habitant morbi tristique. Amet cursus sit amet dictum sit amet justo donec."
+              description="We are always excited about finding our next project, no matter the size. We look forward to more investment opportunities and potential partners, projects, and development within our community."
               linkTo="/what-we-do/#investment"
             />
             <ServicesDrawer
               service="Management"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sapien pellentesque habitant morbi tristique. Amet cursus sit amet dictum sit amet justo donec."
+              description="We are dedicated to providing personalized and attentive care for each property under our management, fostering long-term tenant satisfaction and property value appreciation."
               linkTo="/what-we-do/#management"
             />
           </div>
