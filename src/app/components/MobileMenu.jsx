@@ -5,6 +5,7 @@ import Link from "next/link";
 import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 import { mobileArray } from "../data/NavItems";
+import SecondaryContactButton from "./Buttons/SecondaryContactButton";
 
 export default function MobileMenu() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -42,7 +43,7 @@ export default function MobileMenu() {
       {isMobileMenuOpen && (
         <button
           onClick={toggleMobileMenu}
-          className="lg:hidden absolute top-5 right-5 z-[9999] animate__animated animate__rotateIn"
+          className="lg:hidden absolute top-5 right-5 z-[9998] animate__animated animate__rotateIn"
         >
           <AiOutlineClose className="h-6 w-6 text-white" />
         </button>
@@ -50,12 +51,13 @@ export default function MobileMenu() {
 
       {isMobileMenuOpen && (
         <div className="lg:hidden fixed inset-0 bg-clutchBlue-900 text-white font-medium uppercase bg-opacity-95 z-[9000] animate__animated animate__slideInDown">
-          <div className="flex flex-col h-full justify-center space-y-12 items-center">
+          <div className="flex flex-col h-full justify-center space-y-12 items-center text-xl">
             {mobileArray.map((item, index) => (
               <Link key={index} href={item.linkTo} onClick={toggleMobileMenu}>
                 {item.text}
               </Link>
             ))}
+            <SecondaryContactButton buttonText="Contact Us" />
           </div>
         </div>
       )}

@@ -53,24 +53,12 @@ export const mobileArray = [
     linkTo: "/",
   },
   {
-    text: "History",
-    linkTo: "/who-we-are/history",
+    text: "Who We Are",
+    linkTo: "/who-we-are",
   },
   {
-    text: "Our Team",
-    linkTo: "/who-we-are/team",
-  },
-  {
-    text: "Construction",
-    linkTo: "/what-we-do/#construction",
-  },
-  {
-    text: "Investment",
-    linkTo: "/what-we-do/#investment",
-  },
-  {
-    text: "Management",
-    linkTo: "/what-we-do/#management",
+    text: "What We Do",
+    linkTo: "/what-we-do",
   },
   {
     text: "Our Projects",
