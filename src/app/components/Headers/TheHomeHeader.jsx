@@ -2,12 +2,14 @@ import Link from "next/link";
 import MobileMenu from "../MobileMenu";
 import SecondaryLinkButton from "../Buttons/SecondaryLinkButton";
 import ClutchLogoSVG from "../Logos/ClutchLogoSVG";
+import ContactButton from "../Buttons/PrimaryContactButton";
 import {
   whatWeDoArray,
   whoWeAreArray,
   ourProjectsArray,
 } from "../../data/NavItems";
 import TheHomeNavDropdown from "../Dropdowns/TheHomeNavDropdown";
+import SecondaryContactButton from "../Buttons/SecondaryContactButton";
 
 export default function TheHomeHeader() {
   return (
@@ -45,7 +47,7 @@ export default function TheHomeHeader() {
           >
             503-967-5228
           </a>
-          <SecondaryLinkButton linkTo="/contact" buttonText="Contact" />
+          <SecondaryContactButton buttonText="Contact" />
         </div>
         <MobileMenu />
       </nav>

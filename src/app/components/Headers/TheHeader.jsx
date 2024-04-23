@@ -8,6 +8,8 @@ import {
   whoWeAreArray,
 } from "../../data/NavItems";
 import PrimaryLinkButton from "../Buttons/PrimaryLinkButton";
+import ContactButton from "../Buttons/PrimaryContactButton";
+import PrimaryContactButton from "../Buttons/PrimaryContactButton";
 
 export default function TheHeader() {
   return (
@@ -45,7 +47,7 @@ export default function TheHeader() {
           >
             503-967-5228
           </a>
-          <PrimaryLinkButton linkTo="/contact" buttonText="Contact" />
+          <PrimaryContactButton buttonText="Contact" />
         </div>
         <MobileMenu />
       </nav>
