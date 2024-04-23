@@ -8,27 +8,30 @@ import PhotoLeftTextRightSection from "./components/PhotoLeftTextRightSection";
 import TextAndLinkSection from "./components/TextAndLinkSection";
 
 export const metadata = {
-  title: "Clutch Industries",
-  description: "Description here",
-  keywords: "Keywords here",
+  title: "Clutch Industries | Construction, Investment, Management",
+  description:
+    "Your full service construction experts in the Willamette Valley & beyond.",
+  keywords:
+    "Salem, Oregon, construction, property management, investment, full service, willamette valley, e",
   openGraph: {
-    title: "Title here",
-    description: "Description here",
-    siteName: "Site name here",
+    title: "Clutch Industries | Construction, Investment, Management",
+    description:
+      "Your full service construction experts in the Willamette Valley & beyond.",
+    siteName: "Clutch Industries | Construction, Investment, Management",
     type: "website",
     locale: "en_US",
-    url: "URL here",
+    url: "https://clutchindustries.com",
     images: [
       {
-        url: "https://domainname.com/images/og-image.png",
-        alt: "Alt text here",
+        url: "https://clutchindustries.com/images/og-image.png",
+        alt: "Clutch Industries",
       },
     ],
   },
   images: [
     {
-      url: "https://domainname.com/images/og-image.png",
-      alt: "Alt text here",
+      url: "https://clutchindustries.com/images/og-image.png",
+      alt: "Clutch Industries",
     },
   ],
 };
