@@ -52,7 +52,7 @@ export default function Home() {
           photoUrl={teamPhoto}
           altText="Team photo"
           heading="Our Team"
-          paragraph="We are a team-driven company, motivated by the early challenges of projects that helped show us how effective a highly-aligned, well-chosen team (subcontractors, project managers, architects, land development) can be. We have built an amazing team to understand the challenges and changes, and we believe there is no other team in the Willamette Valley that has our skill set. We are looking forward to more opportunities and potential partners, projects, and development within our community."
+          paragraph="Here at Clutch Industries, we have an unwavering commitment to great service and quality in every thing that we do. Meet the team that makes it all possible."
           buttonText="About Us"
           linkTo="/who-we-are"
           variant="light"

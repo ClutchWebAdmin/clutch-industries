@@ -7,20 +7,20 @@ import { teamMembersArray } from "../data/TeamMembers";
 export default function WhoWeArePage() {
   return (
     <main>
-      <section id="history" className="h-svh">
-        History Section
-      </section>
-
       <PhotoLeftTextRightSection
         id="team"
         photoUrl={teamPhoto}
         altText="Team photo"
-        heading="Who We Are"
-        paragraph="Here at Clutch Industries, we have an unwavering commitment to great service and quality in every thing that we do. Meet the team that makes it all possible."
+        heading="About Us"
+        paragraph="We are a team-driven company, motivated by the early challenges of projects that helped show us how effective a highly-aligned, well-chosen team (subcontractors, project managers, architects, land development) can be. We have built an amazing team to understand the challenges and changes, and we believe there is no other team in the Willamette Valley that has our skill set. We are looking forward to more opportunities and potential partners, projects, and development within our community."
         buttonText="Meet the team"
         linkTo="/who-we-are/#team-members"
-        variant="dark"
+        variant="light"
       />
+
+      <section id="history" className="h-svh bg-clutchBlue-900 text-white">
+        History Section
+      </section>
 
       <section
         id="team-members"
