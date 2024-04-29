@@ -9,6 +9,14 @@ export default {
       type: "string",
     },
     {
+      name: "slug",
+      title: "Slug",
+      type: "slug",
+      options: {
+        source: "projectTitle",
+      },
+    },
+    {
       name: "milestone",
       title: "Milestone",
       type: "string",
@@ -69,9 +77,9 @@ export default {
           type: "string",
           options: {
             list: [
-              { title: "Commercial", value: "commercial" },
-              { title: "Residential", value: "residential" },
-              { title: "Mixed-Use", value: "mixedUse" },
+              { title: "Commercial", value: "Commercial" },
+              { title: "Residential", value: "Residential" },
+              { title: "Mixed-Use", value: "Mixed-Use" },
             ],
           },
         },

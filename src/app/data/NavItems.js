@@ -42,7 +42,7 @@ export const ourProjectsArray = [
     linkTo: "/projects/#residential",
   },
   {
-    text: "Mixed Use",
+    text: "Mixed-Use",
     linkTo: "/projects/#mixed-use",
   },
 ];

@@ -6,7 +6,7 @@ export default function WhatWeDoPage() {
     <main>
       <section
         id="what-we-do"
-        className="flex flex-col gap-6 lg:flex-row h-fit px-5 lg:px-10 py-10 lg:py-20 text-clutchBlue-900"
+        className="flex flex-col gap-6 lg:flex-row h-fit px-5 lg:px-10 py-10 lg:py-20"
       >
         <div className="flex flex-col w-full lg:w-1/2">
           <h2 className="text-4xl md:text-7xl 2xl:text-8xl">What We Do</h2>
@@ -33,7 +33,7 @@ export default function WhatWeDoPage() {
           />
         </div>
       </section>
-      {/* <section id="construction" className="border h-svh">
+      <section id="construction" className="border h-svh">
         Construction Section
       </section>
       <section id="investment" className="border h-svh">
@@ -41,7 +41,7 @@ export default function WhatWeDoPage() {
       </section>
       <section id="management" className="border h-svh">
         Management Section
-      </section> */}
+      </section>
       <TextAndLinkSection
         heading="Ready to work with us?"
         buttonText="Get in touch"

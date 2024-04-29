@@ -94,27 +94,27 @@ export default function Home() {
         >
           <div className="flex flex-col lg:flex-row justify-between w-full">
             <Link
-              href="/projects/#completed"
+              href="/projects/#commercial"
               className="flex w-full lg:w-1/3 bg-gray-400 hover:brightness-105 h-[350px] lg:h-[500px] p-5"
             >
               <h4 className="text-2xl font-medium text-white">
-                Completed Projects
+                Commercial Projects
               </h4>
             </Link>
             <Link
-              href="/projects/#current"
+              href="/projects/#residential"
               className="flex w-full lg:w-1/3 bg-gray-500 hover:brightness-105 h-[350px] lg:h-[500px] p-5"
             >
               <h4 className="text-2xl font-medium text-white">
-                Current Projects
+                Residential Projects
               </h4>
             </Link>
             <Link
-              href="/projects/#upcoming"
+              href="/projects/#mixed-use"
               className="flex w-full lg:w-1/3 bg-gray-600 hover:brightness-105 h-[350px] lg:h-[500px] p-5"
             >
               <h4 className="text-2xl font-medium text-white">
-                Upcoming Projects
+                Mixed-Use Projects
               </h4>
             </Link>
           </div>
