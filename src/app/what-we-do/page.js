@@ -1,4 +1,5 @@
 import ServicesDrawer from "../components/ServicesDrawer";
+import TextAndLinkSection from "../components/TextAndLinkSection";
 
 export default function WhatWeDoPage() {
   return (
@@ -32,7 +33,7 @@ export default function WhatWeDoPage() {
           />
         </div>
       </section>
-      <section id="construction" className="border h-svh">
+      {/* <section id="construction" className="border h-svh">
         Construction Section
       </section>
       <section id="investment" className="border h-svh">
@@ -40,7 +41,13 @@ export default function WhatWeDoPage() {
       </section>
       <section id="management" className="border h-svh">
         Management Section
-      </section>
+      </section> */}
+      <TextAndLinkSection
+        heading="Ready to work with us?"
+        buttonText="Get in touch"
+        variant="dark"
+        purpose="contact"
+      />
     </main>
   );
 }

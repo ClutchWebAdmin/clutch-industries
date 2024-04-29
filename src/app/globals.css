@@ -3,20 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --foreground-hex: #00000;
+  --foreground-hex: #111940;
   --background-hex: #ffffff;
-  --footer-height: 350px;
-}
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-hex: #ffffff;
-    --background-hex: #000000;
-  }
-} */
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {

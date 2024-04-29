@@ -24,8 +24,9 @@ export default function WhoWeArePage() {
 
       <section
         id="team-members"
-        className="h-fit w-full md:w-5/6 mx-auto px-5 md:px-0 py-10 lg:py-20"
+        className="flex flex-col gap-10 h-fit w-full md:w-5/6 mx-auto px-5 md:px-0 py-10 lg:py-20"
       >
+        <h2 className="text-4xl md:text-7xl 2xl:text-8xl">Our Team</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
           {teamMembersArray.map((item, index) => (
             <figure key={index} className="relative col-span-1 shadow-lg">
@@ -41,11 +42,10 @@ export default function WhoWeArePage() {
       </section>
 
       <TextAndLinkSection
-        id="contact"
         heading="Want to work with us?"
         buttonText="Get in touch"
-        linkTo="/contact"
         variant="dark"
+        purpose="contact"
       />
     </main>
   );
