@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import { oxanium } from "../styles/fonts";
 
 export default function StatsSection() {
   const [projectsCompleted, setProjectsCompleted] = useState(0);
@@ -66,7 +67,9 @@ export default function StatsSection() {
         <div className="flex w-8 bg-gray-800"></div>
         <div className=" flex flex-col justify-between w-full">
           <div className="flex flex-grow flex-col gap-2 px-4 py-6 justify-center ">
-            <h3 className="text-lg font-semibold">Projects Completed</h3>
+            <h3 className={`${oxanium.className} text-lg font-semibold`}>
+              Projects Completed
+            </h3>
             <p className="text-6xl">
               {projectsCompleted >= 20 ? 20 : projectsCompleted}
             </p>
@@ -80,7 +83,9 @@ export default function StatsSection() {
         <div className="flex w-8 bg-gray-600"></div>
         <div className=" flex flex-col justify-between w-full">
           <div className="flex flex-grow flex-col gap-2 px-4 py-6 justify-center ">
-            <h3 className="text-lg font-semibold">Square Footage</h3>
+            <h3 className={`${oxanium.className} text-lg font-semibold`}>
+              Square Footage
+            </h3>
             <p className="text-6xl">
               {squareFootage >= 150000 ? 150000 : squareFootage}
             </p>
@@ -94,7 +99,9 @@ export default function StatsSection() {
         <div className="flex w-8 bg-gray-400"></div>
         <div className=" flex flex-col justify-between w-full">
           <div className="flex flex-grow flex-col gap-2 px-4 py-6 justify-center ">
-            <h3 className="text-lg font-semibold">Placeholder</h3>
+            <h3 className={`${oxanium.className} text-lg font-semibold`}>
+              Placeholder
+            </h3>
             <p className="text-6xl">{placeholder}</p>
           </div>
 

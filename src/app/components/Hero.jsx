@@ -4,7 +4,7 @@ import SecondaryLinkButton from "./Buttons/SecondaryLinkButton";
 
 export default function Hero() {
   return (
-    <>
+    <section>
       <Image
         src={heroImage}
         alt="Hero image"
@@ -26,6 +26,6 @@ export default function Hero() {
           <SecondaryLinkButton linkTo="#what-we-do" buttonText="Learn more" />
         </div>
       </div>
-    </>
+    </section>
   );
 }

@@ -1,17 +1,16 @@
 import "animate.css";
 import "./globals.css";
 import TheFooter from "./components/TheFooter";
-import { Oxanium } from "next/font/google";
 import BackToTopButton from "./components/BackToTopButton";
-
-const oxanium = Oxanium({ subsets: ["latin"] });
+import { oxanium, barlow } from "./styles/fonts";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body
-        className={`min-h-svh flex flex-col mx-auto relative ${oxanium.className}`}
-      >
+    <html
+      lang="en"
+      className={`${oxanium.variable} ${barlow.variable} scroll-smooth`}
+    >
+      <body className={`min-h-svh flex flex-col mx-auto relative`}>
         {children}
         <BackToTopButton />
         <TheFooter />

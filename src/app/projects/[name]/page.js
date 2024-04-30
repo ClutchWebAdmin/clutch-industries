@@ -116,74 +116,79 @@ export default async function ProjectDetailsPage({ params }) {
 
   return (
     <main>
-      <div className="flex flex-col gap-8 lg:gap-16 h-full px-5 lg:px-10 py-10 lg:py-20">
-        <div className="grid gap-10 lg:gap-16 grid-cols-2 md:grid-cols-4 lg:grid-cols-12">
-          <h1 className="col-span-full text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-medium">
-            {projectName}
-          </h1>
-
-          <div className="flex flex-col gap-8 lg:gap-16 col-span-full lg:col-span-6 order-2 lg:order-1">
-            <div className="flex flex-col gap-0.5 w-full">
-              <p className="text-xl lg:text-2xl">{introduction}</p>
-            </div>
-            <div className="flex flex-row justify-between">
-              <div className="flex flex-col gap-0.5 w-1/2">
-                <h3 className="font-medium lg:text-lg">Location</h3>
-                <p className="lg:text-lg">{location}</p>
+      <div className="flex flex-col gap-4 lg:gap-5 h-full px-5 lg:px-10 py-10 lg:py-20">
+        <h1 className="col-span-full text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-medium text-clutchBlue-800">
+          {projectName}
+        </h1>
+        <div className="flex flex-col gap-8 lg:gap-16">
+          <div className="grid gap-8 lg:gap-16 grid-cols-2 md:grid-cols-4 lg:grid-cols-12">
+            <div className="flex flex-col gap-8 lg:gap-16 col-span-full lg:col-span-6 order-2 lg:order-1">
+              <div className="flex flex-col gap-0.5 w-full">
+                <p className="text-xl lg:text-2xl">{introduction}</p>
               </div>
-              <div className="flex flex-col gap-0.5 w-1/2">
-                <h3 className="font-medium lg:text-lg">Type</h3>
-                <p className="lg:text-lg">{formattedProjectType}</p>
+              <div className="flex flex-row justify-between">
+                <div className="flex flex-col gap-0.5 w-1/2">
+                  <h3 className="font-medium lg:text-lg">Location</h3>
+                  <p className="lg:text-lg">{location}</p>
+                </div>
+                <div className="flex flex-col gap-0.5 w-1/2">
+                  <h3 className="font-medium lg:text-lg">Type</h3>
+                  <p className="lg:text-lg">{formattedProjectType}</p>
+                </div>
+              </div>
+              <div className="flex flex-row justify-between">
+                <div className="flex flex-col gap-0.5 w-1/2">
+                  <h3 className="font-medium lg:text-lg">Units</h3>
+                  <ul>{renderedUnits}</ul>
+                </div>
+                <div className="flex flex-col gap-0.5 w-1/2">
+                  <h3 className="font-medium lg:text-lg">Square Footage</h3>
+                  <p className="lg:text-lg">#XXXXXX</p>
+                </div>
               </div>
             </div>
-            <div className="flex flex-row justify-between">
-              <div className="flex flex-col gap-0.5 w-1/2">
-                <h3 className="font-medium lg:text-lg">Units</h3>
-                <ul>{renderedUnits}</ul>
+
+            <div className="col-span-full lg:col-span-6 order-1 lg:order-2 relative">
+              <Image
+                src={placeholder}
+                alt="placeholder"
+                className="w-full h-full object-cover"
+              />
+              <p className="absolute top-3 left-3 uppercase font-medium text-xs md:text-base lg:text-lg text-white bg-clutchBlue-700/70 w-fit p-2">
+                {status}
+              </p>
+            </div>
+
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 col-span-full order-3">
+              <div className="flex flex-col gap-0.5 w-full lg:w-1/2">
+                <h3 className="font-medium lg:text-lg">Project Start</h3>
+                <p className="text-sm text-gray-500">{projectStart}</p>
+                <p className="lg:text-lg">{projectStartNotes}</p>
               </div>
-              <div className="flex flex-col gap-0.5 w-1/2">
-                <h3 className="font-medium lg:text-lg">Square Footage</h3>
-                <p className="lg:text-lg">#XXXXXX</p>
+
+              <div className="flex flex-col gap-0.5 w-full lg:w-1/2">
+                <h3 className="font-medium lg:text-lg">Project Finish</h3>
+                <p className="text-sm text-gray-500">{projectEnd}</p>
+                <p className="lg:text-lg">{projectEndNotes}</p>
               </div>
             </div>
-          </div>
 
-          <Image
-            src={placeholder}
-            alt="placeholder"
-            className="col-span-full lg:col-span-6 order-1 lg:order-2"
-          />
-
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 col-span-full order-3">
-            <div className="flex flex-col gap-0.5 w-full lg:w-1/2">
-              <h3 className="font-medium lg:text-lg">Project Start</h3>
-              <p className="text-sm text-gray-500">{projectStart}</p>
-              <p className="lg:text-lg">{projectStartNotes}</p>
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 col-span-full order-4">
+              <div className="flex flex-col gap-0.5 w-full">
+                <h3 className="font-medium lg:text-lg">Strategic Importance</h3>
+                <p className="lg:text-lg">{strategicImportance}</p>
+              </div>
             </div>
 
-            <div className="flex flex-col gap-0.5 w-full lg:w-1/2">
-              <h3 className="font-medium lg:text-lg">Project Finish</h3>
-              <p className="text-sm text-gray-500">{projectEnd}</p>
-              <p className="lg:text-lg">{projectEndNotes}</p>
-            </div>
-          </div>
-
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 col-span-full order-4">
-            <div className="flex flex-col gap-0.5 w-full">
-              <h3 className="font-medium lg:text-lg">Strategic Importance</h3>
-              <p className="lg:text-lg">{strategicImportance}</p>
-            </div>
-          </div>
-
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 col-span-full order-5">
-            <div className="flex flex-col gap-0.5 w-full">
-              <h3 className="font-medium lg:text-lg">Conclusion</h3>
-              <p className="lg:text-lg">{conclusion}</p>
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 col-span-full order-5">
+              <div className="flex flex-col gap-0.5 w-full">
+                <h3 className="font-medium lg:text-lg">Conclusion</h3>
+                <p className="lg:text-lg">{conclusion}</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
       <TextAndLinkSection
         heading="Want to work with us?"
         buttonText="Get in touch"

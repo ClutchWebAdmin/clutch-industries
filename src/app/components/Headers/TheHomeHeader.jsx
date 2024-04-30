@@ -1,8 +1,6 @@
 import Link from "next/link";
 import MobileMenu from "../MobileMenu";
-import SecondaryLinkButton from "../Buttons/SecondaryLinkButton";
 import ClutchLogoSVG from "../Logos/ClutchLogoSVG";
-import ContactButton from "../Buttons/PrimaryContactButton";
 import {
   whatWeDoArray,
   whoWeAreArray,
@@ -10,10 +8,13 @@ import {
 } from "../../data/NavItems";
 import TheHomeNavDropdown from "../Dropdowns/TheHomeNavDropdown";
 import SecondaryContactButton from "../Buttons/SecondaryContactButton";
+import { oxanium } from "@/app/styles/fonts";
 
 export default function TheHomeHeader() {
   return (
-    <header className="absolute flex flex-row w-full z-50 text-white">
+    <header
+      className={`${oxanium.className} absolute flex flex-row w-full z-50 text-white`}
+    >
       <nav className="flex flex-row w-full h-fit lg:items-center justify-between m-5">
         <Link href="/" className="lg:w-1/5 flex-grow">
           <ClutchLogoSVG color1="#FFFFFF" color2="#a0a7e0" />

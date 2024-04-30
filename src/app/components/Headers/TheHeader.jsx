@@ -7,13 +7,14 @@ import {
   whatWeDoArray,
   whoWeAreArray,
 } from "../../data/NavItems";
-import PrimaryLinkButton from "../Buttons/PrimaryLinkButton";
-import ContactButton from "../Buttons/PrimaryContactButton";
 import PrimaryContactButton from "../Buttons/PrimaryContactButton";
+import { oxanium } from "@/app/styles/fonts";
 
 export default function TheHeader() {
   return (
-    <header className="flex flex-row w-full z-50 text-clutchBlue-900">
+    <header
+      className={`${oxanium.className} flex flex-row w-full z-50 text-clutchBlue-900`}
+    >
       <nav className="flex flex-row w-full h-fit lg:items-center justify-between m-5">
         <Link href="/" className="lg:w-1/5 flex-grow">
           <ClutchLogoSVG color1="#000000" color2="#2e3f8e" />

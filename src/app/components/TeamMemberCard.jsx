@@ -11,7 +11,7 @@ export default function TeamMemberCard({ fullName, title, email, photoUrl }) {
       />
       <div className="absolute flex flex-col gap-0.5 bottom-0 left-0 bg-clutchBlue-900/80 backdrop-blur-md w-full h-fit px-4 py-4">
         <div className="flex flex-row items-center justify-between text-white text-sm md:text-base lg:text-xl">
-          <p className="font-medium">{fullName}</p>
+          <h6 className="font-medium">{fullName}</h6>
           <a
             href={`mailto:${email}`}
             target="_blank"
