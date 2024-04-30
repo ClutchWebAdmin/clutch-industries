@@ -34,7 +34,7 @@ export async function generateMetadata({ params }) {
       siteName: "Clutch Industries",
       type: "website",
       locale: "en_US",
-      url: `https://clutch-industries.vercel.app/projects/${slug}`,
+      url: `https://clutchindustries.com/projects/${slug}`,
       images: [
         {
           url: `${imageUrl}`,
@@ -144,7 +144,12 @@ export default async function ProjectDetailsPage({ params }) {
           </p>
         </div>
 
-        <div className="col-span-full order-4 lg:order-2 grid grid-cols-2 lg:grid-cols-4 gap-x-16 gap-y-8">
+        <div
+          className="col-span-full order-4 lg:order-2 grid grid-cols-2 lg:grid-cols-4 gap-x-16 gap-y-8"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
           <div className="flex flex-col gap-0.5">
             <h3 className="font-medium lg:text-lg">Location</h3>
             <p className="lg:text-lg">{location}</p>
@@ -165,7 +170,12 @@ export default async function ProjectDetailsPage({ params }) {
           </div>
         </div>
 
-        <div className="col-span-full order-3 grid grid-cols-2 lg:grid-cols-4 gap-x-16 gap-y-8">
+        <div
+          className="col-span-full order-3 grid grid-cols-2 lg:grid-cols-4 gap-x-16 gap-y-8"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
           <p className="col-span-full lg:col-span-2 text-xl lg:text-2xl xl:text-3xl lg:text-justify">
             {introduction}
           </p>
@@ -185,7 +195,12 @@ export default async function ProjectDetailsPage({ params }) {
           </div>
         </div>
 
-        <div className="col-span-full order-4 grid grid-cols-2 lg:grid-cols-4 gap-x-16 gap-y-8">
+        <div
+          className="col-span-full order-4 grid grid-cols-2 lg:grid-cols-4 gap-x-16 gap-y-8"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
           <div className="flex flex-col gap-0.5 col-span-full">
             <h3 className="font-medium lg:text-lg">Strategic Importance</h3>
             <p className="lg:text-lg">{strategicImportance}</p>

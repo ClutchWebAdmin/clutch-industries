@@ -3,6 +3,7 @@ import "./globals.css";
 import TheFooter from "./components/TheFooter";
 import BackToTopButton from "./components/BackToTopButton";
 import { oxanium, barlow } from "./styles/fonts";
+import AOSLoader from "@/utils/AOSLoader";
 
 export default function RootLayout({ children }) {
   return (
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
         {children}
         <BackToTopButton />
         <TheFooter />
+        <AOSLoader />
       </body>
     </html>
   );

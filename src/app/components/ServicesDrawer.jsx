@@ -20,7 +20,12 @@ export default function ServicesDrawer({
   if (variant === "dark") {
     return (
       <div className="relative border-b">
-        <div className="flex flex-row items-center justify-between py-6">
+        <div
+          className="flex flex-row items-center justify-between py-6"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
           <h6 className="text-lg lg:text-2xl font-semibold">{service}</h6>
 
           <button
@@ -55,7 +60,12 @@ export default function ServicesDrawer({
   } else if (variant === "light") {
     return (
       <div className="relative border-b text-clutchBlue-900">
-        <div className="flex flex-row items-center justify-between py-6">
+        <div
+          className="flex flex-row items-center justify-between py-6"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
           <h6 className="text-lg lg:text-2xl font-semibold">{service}</h6>
 
           <button
