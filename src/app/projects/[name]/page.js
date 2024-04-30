@@ -1,7 +1,7 @@
 import { client } from "../../../../sanity/lib/client";
 import TextAndLinkSection from "@/app/components/TextAndLinkSection";
 import Image from "next/image";
-import placeholder from "../../../../public/images/placeholder.png";
+import placeholder from "../../../../public/images/north-lancaster-business-park.png";
 
 export async function generateMetadata({ params }) {
   const { name } = params;
@@ -68,11 +68,19 @@ export default async function ProjectDetailsPage({ params }) {
       'projectStartNotes': projectTimeline.constructionStartNotes,
       'projectEnd': projectTimeline.constructionEnd,
       'projectEndNotes': projectTimeline.constructionEndNotes,
+      'imageUrl': photo.asset->url,
+      'height': photo.asset->metadata.dimensions.height,
+      'width': photo.asset->metadata.dimensions.width,
+      'blurDataUrl': photo.asset->metadata.lqip,
     }
   `,
     { name }
   );
 
+  const imageUrl = data[0]?.imageUrl;
+  const height = data[0]?.height;
+  const width = data[0]?.width;
+  const blurDataUrl = data[0]?.blurDataUrl;
   const projectName = data[0]?.projectName;
   const unitsObject = data[0]?.units;
   const projectStart = data[0]?.projectStart;
@@ -116,79 +124,79 @@ export default async function ProjectDetailsPage({ params }) {
 
   return (
     <main>
-      <div className="flex flex-col gap-4 lg:gap-5 h-full px-5 lg:px-10 py-10 lg:py-20">
-        <h1 className="col-span-full text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-medium text-clutchBlue-800">
+      <div className="grid grid-cols-2 lg:grid-cols-12 gap-x-16 gap-y-8 h-full px-5 lg:px-10 py-10 lg:py-20">
+        <h1 className="col-span-full text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-medium text-clutchBlue-800 order-1">
           {projectName}
         </h1>
-        <div className="flex flex-col gap-8 lg:gap-16">
-          <div className="grid gap-8 lg:gap-16 grid-cols-2 md:grid-cols-4 lg:grid-cols-12">
-            <div className="flex flex-col gap-8 lg:gap-16 col-span-full lg:col-span-6 order-2 lg:order-1">
-              <div className="flex flex-col gap-0.5 w-full">
-                <p className="text-xl lg:text-2xl">{introduction}</p>
-              </div>
-              <div className="flex flex-row justify-between">
-                <div className="flex flex-col gap-0.5 w-1/2">
-                  <h3 className="font-medium lg:text-lg">Location</h3>
-                  <p className="lg:text-lg">{location}</p>
-                </div>
-                <div className="flex flex-col gap-0.5 w-1/2">
-                  <h3 className="font-medium lg:text-lg">Type</h3>
-                  <p className="lg:text-lg">{formattedProjectType}</p>
-                </div>
-              </div>
-              <div className="flex flex-row justify-between">
-                <div className="flex flex-col gap-0.5 w-1/2">
-                  <h3 className="font-medium lg:text-lg">Units</h3>
-                  <ul>{renderedUnits}</ul>
-                </div>
-                <div className="flex flex-col gap-0.5 w-1/2">
-                  <h3 className="font-medium lg:text-lg">Square Footage</h3>
-                  <p className="lg:text-lg">#XXXXXX</p>
-                </div>
-              </div>
+
+        <div className="col-span-full relative order-2 lg:order-3">
+          <Image
+            src={imageUrl}
+            alt={projectName}
+            height={height}
+            width={width}
+            placeholder="blur"
+            blurDataURL={blurDataUrl}
+            className="w-full h-full object-cover"
+          />
+          <p className="absolute top-3 left-3 uppercase font-medium text-xs md:text-base lg:text-lg text-white bg-clutchBlue-700/70 w-fit p-2">
+            {status}
+          </p>
+        </div>
+
+        <div className="col-span-full order-4 lg:order-2 grid grid-cols-2 lg:grid-cols-4 gap-x-16 gap-y-8">
+          <div className="flex flex-col gap-0.5">
+            <h3 className="font-medium lg:text-lg">Location</h3>
+            <p className="lg:text-lg">{location}</p>
+          </div>
+          <div className="flex flex-col gap-0.5">
+            <h3 className="font-medium lg:text-lg">Type</h3>
+            <p className="lg:text-lg">{formattedProjectType}</p>
+          </div>
+
+          <div className="flex flex-col gap-0.5">
+            <h3 className="font-medium lg:text-lg">Units</h3>
+            <ul>{renderedUnits}</ul>
+          </div>
+
+          <div className="flex flex-col gap-0.5">
+            <h3 className="font-medium lg:text-lg">Square Footage</h3>
+            <p className="lg:text-lg">#XXXXXX</p>
+          </div>
+        </div>
+
+        <div className="col-span-full order-3 grid grid-cols-2 lg:grid-cols-4 gap-x-16 gap-y-8">
+          <p className="col-span-full lg:col-span-2 text-xl lg:text-2xl xl:text-3xl lg:text-justify">
+            {introduction}
+          </p>
+          <div className="col-span-full lg:col-span-2 grid grid-cols-2 gap-8">
+            <div className="flex flex-col gap-0.5">
+              <h3 className="font-medium lg:text-lg">Project Start</h3>
+              <p className="lg:text-lg">{projectStart}</p>
             </div>
-
-            <div className="col-span-full lg:col-span-6 order-1 lg:order-2 relative">
-              <Image
-                src={placeholder}
-                alt="placeholder"
-                className="w-full h-full object-cover"
-              />
-              <p className="absolute top-3 left-3 uppercase font-medium text-xs md:text-base lg:text-lg text-white bg-clutchBlue-700/70 w-fit p-2">
-                {status}
-              </p>
+            <div className="flex flex-col gap-0.5">
+              <h3 className="font-medium lg:text-lg">Project Complete</h3>
+              <p className="lg:text-lg">{projectEnd}</p>
             </div>
-
-            <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 col-span-full order-3">
-              <div className="flex flex-col gap-0.5 w-full lg:w-1/2">
-                <h3 className="font-medium lg:text-lg">Project Start</h3>
-                <p className="text-sm text-gray-500">{projectStart}</p>
-                <p className="lg:text-lg">{projectStartNotes}</p>
-              </div>
-
-              <div className="flex flex-col gap-0.5 w-full lg:w-1/2">
-                <h3 className="font-medium lg:text-lg">Project Finish</h3>
-                <p className="text-sm text-gray-500">{projectEnd}</p>
-                <p className="lg:text-lg">{projectEndNotes}</p>
-              </div>
-            </div>
-
-            <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 col-span-full order-4">
-              <div className="flex flex-col gap-0.5 w-full">
-                <h3 className="font-medium lg:text-lg">Strategic Importance</h3>
-                <p className="lg:text-lg">{strategicImportance}</p>
-              </div>
-            </div>
-
-            <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 col-span-full order-5">
-              <div className="flex flex-col gap-0.5 w-full">
-                <h3 className="font-medium lg:text-lg">Conclusion</h3>
-                <p className="lg:text-lg">{conclusion}</p>
-              </div>
+            <div className="flex flex-col gap-0.5 col-span-full">
+              <h3 className="font-medium lg:text-lg">Project Notes</h3>
+              <p className="lg:text-lg">{projectEndNotes}</p>
             </div>
           </div>
         </div>
+
+        <div className="col-span-full order-4 grid grid-cols-2 lg:grid-cols-4 gap-x-16 gap-y-8">
+          <div className="flex flex-col gap-0.5 col-span-full">
+            <h3 className="font-medium lg:text-lg">Strategic Importance</h3>
+            <p className="lg:text-lg">{strategicImportance}</p>
+          </div>
+          <div className="flex flex-col gap-0.5 col-span-full">
+            <h3 className="font-medium lg:text-lg">Conclusion</h3>
+            <p className="lg:text-lg">{conclusion}</p>
+          </div>
+        </div>
       </div>
+
       <TextAndLinkSection
         heading="Want to work with us?"
         buttonText="Get in touch"
