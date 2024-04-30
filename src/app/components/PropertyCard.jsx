@@ -1,21 +1,30 @@
 import Link from "next/link";
 import Image from "next/image";
-import placeholder from "../../../public/images/placeholder.png";
 
 export default function PropertyCard({ project }) {
   return (
     <Link
       href={`/projects/${project.slug}`}
-      className="w-full h-full flex flex-col gap-4 relative"
+      className="flex flex-col w-full h-fit relative hover:opacity-80 transition duration-300"
     >
       <Image
-        src={placeholder}
-        alt="Alt text"
-        className="w-full h-auto object-cover"
+        src={project.imageUrl}
+        alt={project.projectTitle}
+        height={project.height}
+        width={project.width}
+        placeholder="blur"
+        blurDataURL={project.blurDataURL}
+        className="w-auto h-fit object-cover"
       />
-      <h5 className="text-lg md:text-xl absolute bottom-2 left-2">
-        {project.projectTitle}
-      </h5>
+      <p className="absolute top-0 right-0 bg-clutchBlue-100 px-4 py-2 uppercase font-medium">
+        {project.status}
+      </p>
+      <div className="flex flex-col gap-0.5 bg-clutchBlue-900 backdrop-blur-md w-full h-fit px-4 py-4 relative">
+        <h5 className="font-medium text-white">{project.projectTitle}</h5>
+        <p className="text-clutchBlue-100 text-xs md:text-sm">
+          {project.location}
+        </p>
+      </div>
     </Link>
   );
 }

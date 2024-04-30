@@ -1,7 +1,6 @@
 import { client } from "../../../../sanity/lib/client";
 import TextAndLinkSection from "@/app/components/TextAndLinkSection";
 import Image from "next/image";
-import placeholder from "../../../../public/images/north-lancaster-business-park.png";
 
 export async function generateMetadata({ params }) {
   const { name } = params;
@@ -14,6 +13,7 @@ export async function generateMetadata({ params }) {
       introduction,
       'projectType': projectDetails.projectType,
       'location': projectDetails.location,
+      'imageUrl': photo.asset->url
     }
   `,
     { name }
@@ -22,6 +22,7 @@ export async function generateMetadata({ params }) {
   const slug = data[0]?.slug;
   const projectName = data[0]?.projectName;
   const introduction = data[0]?.introduction;
+  const imageUrl = data[0]?.imageUrl;
 
   return {
     title: `${projectName} | Clutch Industries`,
@@ -36,14 +37,14 @@ export async function generateMetadata({ params }) {
       url: `https://clutch-industries.vercel.app/projects/${slug}`,
       images: [
         {
-          url: `https://clutchindustries.com/images/og-image.png`,
+          url: `${imageUrl}`,
           alt: `${projectName}`,
         },
       ],
     },
     images: [
       {
-        url: `https://clutchindustries.com/images/og-image.png`,
+        url: `${imageUrl}`,
         alt: `${projectName}`,
       },
     ],
@@ -84,7 +85,6 @@ export default async function ProjectDetailsPage({ params }) {
   const projectName = data[0]?.projectName;
   const unitsObject = data[0]?.units;
   const projectStart = data[0]?.projectStart;
-  const projectStartNotes = data[0]?.projectStartNotes;
   const projectEnd = data[0]?.projectEnd;
   const projectEndNotes = data[0]?.projectEndNotes;
   const introduction = data[0]?.introduction;

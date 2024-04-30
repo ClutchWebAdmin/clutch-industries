@@ -7,6 +7,7 @@ export default {
       name: "projectTitle",
       title: "Project Title",
       type: "string",
+      validation: (rule) => rule.required(),
     },
     {
       name: "slug",
@@ -15,6 +16,7 @@ export default {
       options: {
         source: "projectTitle",
       },
+      validation: (rule) => rule.required(),
     },
     {
       name: "milestone",
@@ -25,6 +27,7 @@ export default {
       name: "status",
       title: "Status",
       type: "string",
+      validation: (rule) => rule.required(),
       options: {
         list: [
           { title: "Completed", value: "complete" },
@@ -38,16 +41,19 @@ export default {
       name: "introduction",
       title: "Introduction",
       type: "text",
+      validation: (rule) => rule.required(),
     },
     {
       name: "projectTimeline",
       title: "Project Timeline",
       type: "object",
+      validation: (rule) => rule.required(),
       fields: [
         {
           name: "constructionStart",
           title: "Construction Start",
           type: "string",
+          validation: (rule) => rule.required(),
         },
         {
           name: "constructionStartNotes",
@@ -58,11 +64,13 @@ export default {
           name: "constructionEnd",
           title: "Construction End",
           type: "string",
+          validation: (rule) => rule.required(),
         },
         {
           name: "constructionEndNotes",
           title: "Construction End Notes",
           type: "string",
+          validation: (rule) => rule.required(),
         },
       ],
     },
@@ -70,11 +78,13 @@ export default {
       name: "projectDetails",
       title: "Project Details",
       type: "object",
+      validation: (rule) => rule.required(),
       fields: [
         {
           name: "projectType",
           title: "Project Type",
           type: "string",
+          validation: (rule) => rule.required(),
           options: {
             list: [
               { title: "Commercial", value: "Commercial" },
@@ -87,11 +97,14 @@ export default {
           name: "location",
           title: "Location",
           type: "string",
+          description: "City, State",
+          validation: (rule) => rule.required(),
         },
         {
           name: "units",
           title: "Units",
           type: "object",
+          validation: (rule) => rule.required(),
           fields: [
             { name: "ThreeBedroom", title: "Three Bedroom", type: "number" },
             { name: "TwoBedroom", title: "Two Bedroom", type: "number" },
@@ -111,11 +124,13 @@ export default {
           name: "strategicImportance",
           title: "Strategic Importance",
           type: "text",
+          validation: (rule) => rule.required(),
         },
         {
           name: "conclusion",
           title: "Conclusion",
           type: "text",
+          validation: (rule) => rule.required(),
         },
       ],
     },
@@ -123,6 +138,7 @@ export default {
       name: "photo",
       title: "Photo",
       type: "image",
+      validation: (rule) => rule.required(),
     },
   ],
 };
