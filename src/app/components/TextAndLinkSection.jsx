@@ -15,7 +15,9 @@ export default function TextAndLinkSection({
       <section
         className={`flex flex-col gap-6 h-fit px-5 lg:px-10 py-20 text-clutchBlue-900 bg-white justify-center items-center`}
       >
-        <h5 className="text-3xl md:text-7xl 2xl:text-8xl">{heading}</h5>
+        <h5 className="text-3xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
+          {heading}
+        </h5>
         <PrimaryLinkButton buttonText={buttonText} linkTo={linkTo} />
       </section>
     );
@@ -24,7 +26,9 @@ export default function TextAndLinkSection({
       <section
         className={`flex flex-col gap-6 h-fit px-5 lg:px-10 py-20 text-clutchBlue-900 bg-white justify-center items-center`}
       >
-        <h5 className="text-3xl md:text-7xl 2xl:text-8xl">{heading}</h5>
+        <h5 className="text-3xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
+          {heading}
+        </h5>
         <PrimaryContactButton buttonText={buttonText} />
       </section>
     );
@@ -33,7 +37,9 @@ export default function TextAndLinkSection({
       <section
         className={`flex flex-col gap-6 h-fit px-5 lg:px-10 py-20 text-white bg-clutchBlue-700 justify-center items-center`}
       >
-        <h5 className="text-3xl md:text-7xl 2xl:text-8xl">{heading}</h5>
+        <h5 className="text-3xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
+          {heading}
+        </h5>
         <SecondaryLinkButton buttonText={buttonText} linkTo={linkTo} />
       </section>
     );
@@ -42,7 +48,9 @@ export default function TextAndLinkSection({
       <section
         className={`flex flex-col gap-6 h-fit px-5 lg:px-10 py-20 text-white bg-clutchBlue-700 justify-center items-center`}
       >
-        <h5 className="text-3xl md:text-7xl 2xl:text-8xl">{heading}</h5>
+        <h5 className="text-3xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
+          {heading}
+        </h5>
         <SecondaryContactButton buttonText={buttonText} />
       </section>
     );

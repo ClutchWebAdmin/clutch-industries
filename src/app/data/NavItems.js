@@ -34,16 +34,16 @@ export const ourProjectsArray = [
     linkTo: "/projects",
   },
   {
-    text: "Commercial",
-    linkTo: "/projects/#commercial",
-  },
-  {
     text: "Residential",
     linkTo: "/projects/#residential",
   },
   {
     text: "Mixed-Use",
     linkTo: "/projects/#mixed-use",
+  },
+  {
+    text: "Commercial",
+    linkTo: "/projects/#commercial",
   },
 ];
 

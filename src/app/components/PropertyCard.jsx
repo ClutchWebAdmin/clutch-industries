@@ -6,7 +6,7 @@ export default function PropertyCard({ project }) {
   return (
     <Link
       href={`/projects/${project.slug}`}
-      className="border w-full h-full flex flex-col gap-4 relative"
+      className="w-full h-full flex flex-col gap-4 relative"
     >
       <Image
         src={placeholder}

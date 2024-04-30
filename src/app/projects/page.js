@@ -9,16 +9,19 @@ export default function ProjectsPage() {
           <h2 className="text-4xl md:text-7xl 2xl:text-8xl">Our Projects</h2>
         </section>
         <ProjectsSection
-          queryFilter="commercial"
-          heading="Commercial Properties"
-        />
-        <ProjectsSection
           queryFilter="residential"
+          id="residential"
           heading="Residential Properties"
         />
         <ProjectsSection
           queryFilter="mixedUse"
+          id="mixed-use"
           heading="Mixed-Use Properties"
+        />
+        <ProjectsSection
+          queryFilter="commercial"
+          id="commercial"
+          heading="Commercial Properties"
         />
       </div>
       <TextAndLinkSection
