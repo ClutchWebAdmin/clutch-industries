@@ -120,10 +120,9 @@ export default {
       ],
     },
     {
-      name: "photos",
-      title: "Photos",
-      type: "array",
-      of: [{ type: "image" }],
+      name: "photo",
+      title: "Photo",
+      type: "image",
     },
   ],
 };
