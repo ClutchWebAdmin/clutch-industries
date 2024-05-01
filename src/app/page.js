@@ -6,6 +6,7 @@ import TheHomeHeader from "./components/Headers/TheHomeHeader";
 import StatsSection from "./components/StatsSection";
 import PhotoLeftTextRightSection from "./components/PhotoLeftTextRightSection";
 import TextAndLinkSection from "./components/TextAndLinkSection";
+import DrawerSection from "./components/DrawerSection";
 
 export const metadata = {
   title: "Clutch Industries | Construction, Investment, Management",
@@ -58,35 +59,36 @@ export default function Home() {
           variant="light"
         />
 
-        <section
+        <DrawerSection
           id="what-we-do"
-          className="flex flex-col gap-6 lg:flex-row h-fit text-white bg-clutchBlue-900 px-5 lg:px-10 py-10 lg:py-20"
-        >
-          <div className="flex flex-col w-full lg:w-1/2">
-            <h2 className="text-4xl md:text-7xl 2xl:text-8xl">Our Services</h2>
-          </div>
-
-          <div className="flex flex-col w-full lg:w-1/2">
-            <ServicesDrawer
-              service="Construction"
-              description="We focus on adaptive reuse, flex warehouse, and full multi-family construction from land acquisition to occupancy in the Willamette Valley and the surrounding area. We currently have more than 500 multifamily units planned over the next three years."
-              linkTo="/what-we-do"
-              variant="dark"
-            />
-            <ServicesDrawer
-              service="Investment"
-              description="We are always excited about finding our next project, no matter the size. We look forward to more investment opportunities and potential partners, projects, and development within our community."
-              linkTo="/what-we-do"
-              variant="dark"
-            />
-            <ServicesDrawer
-              service="Management"
-              description="We are dedicated to providing personalized and attentive care for each property under our management, fostering long-term tenant satisfaction and property value appreciation."
-              linkTo="/what-we-do"
-              variant="dark"
-            />
-          </div>
-        </section>
+          heading="Our Services"
+          variant="dark"
+          children={
+            <>
+              <ServicesDrawer
+                service="Construction"
+                description="We focus on adaptive reuse, flex warehouse, and full multi-family construction from land acquisition to occupancy in the Willamette Valley and the surrounding area. We currently have more than 500 multifamily units planned over the next three years."
+                linkTo="/what-we-do"
+                variant="dark"
+                buttonText="Learn more"
+              />
+              <ServicesDrawer
+                service="Investment"
+                description="We are always excited about finding our next project, no matter the size. We look forward to more investment opportunities and potential partners, projects, and development within our community."
+                linkTo="/what-we-do"
+                variant="dark"
+                buttonText="Learn more"
+              />
+              <ServicesDrawer
+                service="Management"
+                description="We are dedicated to providing personalized and attentive care for each property under our management, fostering long-term tenant satisfaction and property value appreciation."
+                linkTo="/what-we-do"
+                variant="dark"
+                buttonText="Learn more"
+              />
+            </>
+          }
+        />
 
         <section
           id="our-properties"

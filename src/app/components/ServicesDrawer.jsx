@@ -10,6 +10,7 @@ export default function ServicesDrawer({
   description,
   linkTo,
   variant,
+  buttonText,
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -49,9 +50,9 @@ export default function ServicesDrawer({
           </div>
           <Link
             href={linkTo}
-            className="flex flex-row items-center gap-2 mb-6 w-fit ml-auto text-clutchBlue-50 hover:text-clutchBlue-200 hover:-translate-x-2 transition duration-300"
+            className="flex flex-row items-center gap-2 mb-6 w-fit ml-auto text-clutchBlue-500 hover:text-clutchBlue-400 hover:-translate-x-2 transition duration-300"
           >
-            Learn more
+            {buttonText}
             <FaArrowRight className="text-xs" />
           </Link>
         </div>
@@ -91,7 +92,7 @@ export default function ServicesDrawer({
             href={linkTo}
             className="flex flex-row items-center gap-2 mb-6 w-fit ml-auto text-clutchBlue-500 hover:text-clutchBlue-400 hover:-translate-x-2 transition duration-300"
           >
-            Learn more
+            {buttonText}
             <FaArrowRight className="text-xs" />
           </Link>
         </div>

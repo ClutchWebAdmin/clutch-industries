@@ -18,8 +18,19 @@ export default function PhotoLeftTextRightSection({
         id={id}
         className={`flex flex-col gap-6 lg:gap-10 lg:flex-row h-fit text-white bg-clutchBlue-900 px-5 lg:px-10 py-10 lg:py-20`}
       >
-        <div className="flex w-full lg:w-1/2">
-          <Image src={photoUrl} alt={altText} />
+        <div
+          className="flex w-full lg:w-1/2"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
+          <Image
+            src={photoUrl}
+            alt={altText}
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-once="true"
+          />
         </div>
         <div
           className="flex flex-col gap-6 w-full lg:w-1/2"
@@ -41,7 +52,12 @@ export default function PhotoLeftTextRightSection({
         id={id}
         className={`flex flex-col gap-6 lg:gap-10 lg:flex-row h-fit text-clutchBlue-900 bg-white px-5 lg:px-10 py-10 lg:py-20`}
       >
-        <div className="flex w-full lg:w-1/2">
+        <div
+          className="flex w-full lg:w-1/2"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
           <Image src={photoUrl} alt={altText} />
         </div>
         <div

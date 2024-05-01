@@ -3,7 +3,7 @@ import { MdOutlineEmail } from "react-icons/md";
 
 export default function TeamMemberCard({ fullName, title, email, photoUrl }) {
   return (
-    <>
+    <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
       <Image
         src={photoUrl}
         alt={fullName}
@@ -23,6 +23,6 @@ export default function TeamMemberCard({ fullName, title, email, photoUrl }) {
 
         <p className="text-clutchBlue-100 text-xs md:text-sm">{title}</p>
       </div>
-    </>
+    </div>
   );
 }
