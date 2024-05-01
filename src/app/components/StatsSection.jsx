@@ -4,6 +4,10 @@ import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { oxanium } from "../styles/fonts";
 
+const maxProjectsCompleted = 20;
+const maxSquareFootage = 321456;
+const maxPlaceholder = 54320;
+
 export default function StatsSection() {
   const [projectsCompleted, setProjectsCompleted] = useState(0);
   const [squareFootage, setSquareFootage] = useState(0);
@@ -16,8 +20,8 @@ export default function StatsSection() {
   useEffect(() => {
     if (inView) {
       const projectsInterval = setInterval(() => {
-        // Increment projectsCompleted by 1 until it reaches 20
-        if (projectsCompleted < 20) {
+        // Increment projectsCompleted by 1 until it reaches maxProjectsCompleted
+        if (projectsCompleted < maxProjectsCompleted) {
           setProjectsCompleted((prevCount) => prevCount + 1);
         }
       }, 150);
@@ -31,8 +35,8 @@ export default function StatsSection() {
   useEffect(() => {
     if (inView) {
       const squareFootageInterval = setInterval(() => {
-        // Increment squareFootage by 100 until it reaches 150000
-        if (squareFootage < 150000) {
+        // Increment squareFootage by 100 until it reaches maxSquareFootage
+        if (squareFootage < maxSquareFootage) {
           setSquareFootage((prevCount) => prevCount + 100);
         }
       }, 1);
@@ -46,8 +50,8 @@ export default function StatsSection() {
   useEffect(() => {
     if (inView) {
       const placeholderInterval = setInterval(() => {
-        // Increment placeholder by 50 until it reaches 20000
-        if (placeholder < 20000) {
+        // Increment placeholder by 50 until it reaches maxPlaceholder
+        if (placeholder < maxPlaceholder) {
           setPlaceholder((prevCount) => prevCount + 50);
         }
       }, 5);
@@ -57,6 +61,10 @@ export default function StatsSection() {
       };
     }
   }, [inView, placeholder]);
+
+  const formatNumberWithCommas = (number) => {
+    return number.toLocaleString();
+  };
 
   return (
     <section
@@ -71,7 +79,11 @@ export default function StatsSection() {
               Projects Completed
             </h3>
             <p className="text-6xl">
-              {projectsCompleted >= 20 ? 20 : projectsCompleted}
+              {formatNumberWithCommas(
+                projectsCompleted >= maxProjectsCompleted
+                  ? maxProjectsCompleted
+                  : projectsCompleted
+              )}
             </p>
           </div>
 
@@ -87,7 +99,11 @@ export default function StatsSection() {
               Square Footage
             </h3>
             <p className="text-6xl">
-              {squareFootage >= 150000 ? 150000 : squareFootage}
+              {formatNumberWithCommas(
+                squareFootage >= maxSquareFootage
+                  ? maxSquareFootage
+                  : squareFootage
+              )}
             </p>
           </div>
 
@@ -102,7 +118,11 @@ export default function StatsSection() {
             <h3 className={`${oxanium.className} text-lg font-semibold`}>
               Placeholder
             </h3>
-            <p className="text-6xl">{placeholder}</p>
+            <p className="text-6xl">
+              {formatNumberWithCommas(
+                placeholder >= maxPlaceholder ? maxPlaceholder : placeholder
+              )}
+            </p>
           </div>
 
           <div className="h-2 w-full bg-gray-300"></div>
