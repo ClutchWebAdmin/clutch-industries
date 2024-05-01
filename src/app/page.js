@@ -59,36 +59,29 @@ export default function Home() {
           variant="light"
         />
 
-        <DrawerSection
-          id="what-we-do"
-          heading="Our Services"
-          variant="dark"
-          children={
-            <>
-              <ServicesDrawer
-                service="Construction"
-                description="We focus on adaptive reuse, flex warehouse, and full multi-family construction from land acquisition to occupancy in the Willamette Valley and the surrounding area. We currently have more than 500 multifamily units planned over the next three years."
-                linkTo="/what-we-do"
-                variant="dark"
-                buttonText="Learn more"
-              />
-              <ServicesDrawer
-                service="Investment"
-                description="We are always excited about finding our next project, no matter the size. We look forward to more investment opportunities and potential partners, projects, and development within our community."
-                linkTo="/what-we-do"
-                variant="dark"
-                buttonText="Learn more"
-              />
-              <ServicesDrawer
-                service="Management"
-                description="We are dedicated to providing personalized and attentive care for each property under our management, fostering long-term tenant satisfaction and property value appreciation."
-                linkTo="/what-we-do"
-                variant="dark"
-                buttonText="Learn more"
-              />
-            </>
-          }
-        />
+        <DrawerSection id="what-we-do" heading="Our Services" variant="dark">
+          <ServicesDrawer
+            service="Construction"
+            description="We focus on adaptive reuse, flex warehouse, and full multi-family construction from land acquisition to occupancy in the Willamette Valley and the surrounding area. We currently have more than 500 multifamily units planned over the next three years."
+            linkTo="/what-we-do"
+            variant="dark"
+            buttonText="Learn more"
+          />
+          <ServicesDrawer
+            service="Investment"
+            description="We are always excited about finding our next project, no matter the size. We look forward to more investment opportunities and potential partners, projects, and development within our community."
+            linkTo="/what-we-do"
+            variant="dark"
+            buttonText="Learn more"
+          />
+          <ServicesDrawer
+            service="Management"
+            description="We are dedicated to providing personalized and attentive care for each property under our management, fostering long-term tenant satisfaction and property value appreciation."
+            linkTo="/what-we-do"
+            variant="dark"
+            buttonText="Learn more"
+          />
+        </DrawerSection>
 
         <section
           id="our-properties"
