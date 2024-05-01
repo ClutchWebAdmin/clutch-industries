@@ -3,6 +3,7 @@ import teamPhoto from "../../../public/images/clutch-leadership.png";
 import TextAndLinkSection from "../components/TextAndLinkSection";
 import TeamMemberCard from "../components/TeamMemberCard";
 import { teamMembersArray } from "../data/TeamMembers";
+import TimelineSection from "../components/TimelineSection";
 
 export default function WhoWeArePage() {
   return (
@@ -18,8 +19,16 @@ export default function WhoWeArePage() {
         variant="light"
       />
 
-      <section id="history" className="h-svh bg-clutchBlue-900 text-white">
-        History Section
+      <section className="flex flex-col gap-8 lg:gap-16 bg-clutchBlue-800 text-white px-5 lg:px-10 py-10 lg:py-20">
+        <div
+          className="flex flex-col gap-6 w-full"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
+          <h2 className="text-4xl md:text-7xl 2xl:text-8xl">Our History</h2>
+          <TimelineSection />
+        </div>
       </section>
 
       <section
