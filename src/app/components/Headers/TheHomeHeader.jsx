@@ -20,7 +20,7 @@ export default function TheHomeHeader() {
           <ClutchLogoSVG color1="#FFFFFF" color2="#a0a7e0" />
         </Link>
 
-        <div className="hidden lg:flex flex-row items-center justify-center gap-8 lg:w-3/5 max-w-fit">
+        <div className="hidden lg:flex flex-row items-center justify-center gap-6 lg:gap-2 xl:gap-8 lg:w-3/5 max-w-fit">
           <TheHomeNavDropdown
             dropdownArray={whoWeAreArray}
             mainLinkText="Who We Are"

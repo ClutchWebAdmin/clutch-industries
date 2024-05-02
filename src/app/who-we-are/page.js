@@ -3,6 +3,7 @@ import teamPhoto from "../../../public/images/clutch-leadership.png";
 import TextAndLinkSection from "../components/TextAndLinkSection";
 import TeamMemberCard from "../components/TeamMemberCard";
 import { teamMembersArray } from "../data/TeamMembers";
+import TimelineSection from "../components/TimelineSection";
 
 export default function WhoWeArePage() {
   return (
@@ -18,15 +19,38 @@ export default function WhoWeArePage() {
         variant="light"
       />
 
-      <section id="history" className="h-svh bg-clutchBlue-900 text-white">
-        History Section
+      <section
+        id="history"
+        className="flex flex-col gap-8 lg:gap-16 bg-clutchBlue-800 text-white px-5 lg:px-10 py-10 lg:py-20"
+      >
+        <div
+          className="flex flex-col gap-6 w-full"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
+          <h2 className="text-4xl md:text-7xl 2xl:text-8xl text-start lg:text-center">
+            Our History
+          </h2>
+          <TimelineSection />
+        </div>
       </section>
+
+      <TextAndLinkSection
+        heading="View all of our projects"
+        buttonText="Click here"
+        variant="dark"
+        purpose="link"
+        linkTo="/projects"
+      />
 
       <section
         id="team-members"
         className="flex flex-col gap-10 h-fit w-full md:w-5/6 mx-auto px-5 md:px-0 py-10 lg:py-20"
       >
-        <h2 className="text-4xl md:text-7xl 2xl:text-8xl">Our Team</h2>
+        <h2 className="text-4xl md:text-7xl 2xl:text-8xl text-center">
+          Our Team
+        </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
           {teamMembersArray.map((item, index) => (
             <figure key={index} className="relative col-span-1 shadow-lg">

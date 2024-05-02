@@ -24,6 +24,12 @@ export default {
       type: "string",
     },
     {
+      name: "includeInTimeline",
+      title: "Include In Timeline?",
+      type: "boolean",
+      validation: (rule) => rule.required(),
+    },
+    {
       name: "status",
       title: "Status",
       type: "string",
@@ -52,7 +58,10 @@ export default {
         {
           name: "constructionStart",
           title: "Construction Start",
-          type: "string",
+          type: "date",
+          options: {
+            dateFormat: "MMMM YYYY",
+          },
           validation: (rule) => rule.required(),
         },
         {
@@ -63,7 +72,10 @@ export default {
         {
           name: "constructionEnd",
           title: "Construction End",
-          type: "string",
+          type: "date",
+          options: {
+            dateFormat: "MMMM YYYY",
+          },
           validation: (rule) => rule.required(),
         },
         {
