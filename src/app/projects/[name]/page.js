@@ -1,6 +1,7 @@
 import { client } from "../../../../sanity/lib/client";
 import TextAndLinkSection from "@/app/components/TextAndLinkSection";
 import Image from "next/image";
+import { barlow } from "@/app/styles/fonts";
 
 export async function generateMetadata({ params }) {
   const { name } = params;
@@ -126,7 +127,7 @@ export default async function ProjectDetailsPage({ params }) {
   const renderedUnits = Object.entries(unitsObject).map(([type, count]) => {
     const label = labels[type] || type;
     return (
-      <li key={type} className="lg:text-lg">
+      <li key={type} className={`${barlow.className} lg:text-lg`}>
         {label}: {count}
       </li>
     );
