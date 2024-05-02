@@ -105,6 +105,16 @@ export default async function ProjectDetailsPage({ params }) {
     formattedProjectType = projectTypeRaw;
   }
 
+  let formattedStartDate = new Date(projectStart).toLocaleDateString("en-US", {
+    month: "long",
+    year: "numeric",
+  });
+
+  let formattedEndDate = new Date(projectEnd).toLocaleDateString("en-US", {
+    month: "long",
+    year: "numeric",
+  });
+
   const labels = {
     Studio: "Studio",
     OneBedroom: "1BR",
@@ -182,11 +192,11 @@ export default async function ProjectDetailsPage({ params }) {
           <div className="col-span-full lg:col-span-2 grid grid-cols-2 gap-8">
             <div className="flex flex-col gap-0.5">
               <h3 className="font-medium lg:text-lg">Project Start</h3>
-              <p className="lg:text-lg">{projectStart}</p>
+              <p className="lg:text-lg">{formattedStartDate}</p>
             </div>
             <div className="flex flex-col gap-0.5">
               <h3 className="font-medium lg:text-lg">Project Complete</h3>
-              <p className="lg:text-lg">{projectEnd}</p>
+              <p className="lg:text-lg">{formattedEndDate}</p>
             </div>
             <div className="flex flex-col gap-0.5 col-span-full">
               <h3 className="font-medium lg:text-lg">Project Notes</h3>
