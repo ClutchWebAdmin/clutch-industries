@@ -4,6 +4,8 @@ import TheFooter from "./components/TheFooter";
 import BackToTopButton from "./components/BackToTopButton";
 import { oxanium, barlow } from "./styles/fonts";
 import AOSLoader from "@/utils/AOSLoader";
+import { Analytics } from "@vercel/analytics/react";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export default function RootLayout({ children }) {
   return (
@@ -16,6 +18,8 @@ export default function RootLayout({ children }) {
         <BackToTopButton />
         <TheFooter />
         <AOSLoader />
+        <Analytics />
+        <GoogleAnalytics gaId="G-F6SPW3KVYM" />
       </body>
     </html>
   );
