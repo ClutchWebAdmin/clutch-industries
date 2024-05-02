@@ -20,7 +20,7 @@ export default function TheHeader() {
           <ClutchLogoSVG color1="#000000" color2="#2e3f8e" />
         </Link>
 
-        <div className="hidden lg:flex flex-row items-center justify-center gap-8 lg:w-3/5 max-w-fit">
+        <div className="hidden lg:flex flex-row items-center justify-center gap-6 lg:gap-2 xl:gap-8 lg:w-3/5 max-w-fit">
           <NavDropdown
             dropdownArray={whoWeAreArray}
             mainLinkText="Who We Are"

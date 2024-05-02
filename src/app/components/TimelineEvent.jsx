@@ -1,19 +1,18 @@
 import Image from "next/image";
 import { LuShovel } from "react-icons/lu";
 import Link from "next/link";
+import { barlow } from "../styles/fonts";
 
-export default function TimelineEvent({
-  variant,
-  date,
-  imageUrl,
-  altText,
-  milestone,
-  linkTo,
-}) {
+export default function TimelineEvent({ variant, timelineEvent }) {
+  const formattedDate = new Date(timelineEvent.date).toLocaleDateString(
+    "en-US",
+    { month: "long", year: "numeric" }
+  );
+
   if (variant === "left") {
     return (
       <div
-        className="hidden lg:flex justify-between mb-8 lg:mb-16"
+        className="hidden lg:flex justify-between"
         data-aos="fade-up"
         data-aos-duration="1000"
         data-aos-once="true"
@@ -23,17 +22,22 @@ export default function TimelineEvent({
             <LuShovel className="text-lg lg:text-3xl" />
           </div>
           <div className="flex flex-col gap-4 w-full">
-            <h4 className="lg:text-2xl">{date}</h4>
+            <h4 className={`${barlow.className} lg:text-2xl`}>
+              {formattedDate}
+            </h4>
             <Image
-              src={imageUrl}
-              alt={altText}
+              src={`${timelineEvent.imageUrl}?w=600`}
+              alt={timelineEvent.projectTitle}
               className="object-cover w-full h-auto"
+              blurDataURL={timelineEvent.blurDataURL}
+              height={timelineEvent.height}
+              width={timelineEvent.width}
             />
             <div className="flex flex-col gap-0.5">
-              <h5 className="text-xl lg:text-4xl">{milestone}</h5>
+              <h5 className="text-xl lg:text-4xl">{timelineEvent.milestone}</h5>
               <Link
-                href={linkTo}
-                className="text-clutchBlue-200 hover:text-clutchBlue-100 transition duration-200 underline underline-offset-4"
+                href={timelineEvent.slug}
+                className={`${barlow.className} text-clutchBlue-200 hover:text-clutchBlue-100 transition duration-200 underline underline-offset-4`}
               >
                 View details
               </Link>
@@ -46,7 +50,7 @@ export default function TimelineEvent({
   } else if (variant === "right") {
     return (
       <div
-        className="flex justify-between mb-8 lg:mb-16"
+        className="flex justify-between"
         data-aos="fade-up"
         data-aos-duration="1000"
         data-aos-once="true"
@@ -57,17 +61,23 @@ export default function TimelineEvent({
             <LuShovel className="text-lg lg:text-3xl" />
           </div>
           <div className="flex flex-col gap-4 w-full">
-            <h4 className="lg:text-2xl">{date}</h4>
+            <h4 className={`${barlow.className} lg:text-2xl`}>
+              {formattedDate}
+            </h4>
             <Image
-              src={imageUrl}
-              alt={altText}
+              src={`${timelineEvent.imageUrl}?w=600`}
+              alt={timelineEvent.projectTitle}
               className="object-cover w-full h-auto"
+              placeholder="blur"
+              blurDataURL={timelineEvent.blurDataURL}
+              height={timelineEvent.height}
+              width={timelineEvent.width}
             />
             <div className="flex flex-col gap-0.5">
-              <h5 className="text-xl lg:text-4xl">{milestone}</h5>
+              <h5 className="text-xl lg:text-4xl">{timelineEvent.milestone}</h5>
               <Link
-                href={linkTo}
-                className="text-clutchBlue-200 hover:text-clutchBlue-100 transition duration-200 underline underline-offset-4"
+                href={timelineEvent.slug}
+                className={`${barlow.className} text-clutchBlue-200 hover:text-clutchBlue-100 transition duration-200 underline underline-offset-4`}
               >
                 View details
               </Link>
