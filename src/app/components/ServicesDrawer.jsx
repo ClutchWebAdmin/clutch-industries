@@ -32,7 +32,6 @@ export default function ServicesDrawer({
           <button
             className="text-2xl lg:text-4xl font-thin"
             onClick={toggleDrawer}
-            id="open-and-close-accordion"
             aria-label="open-and-close-accordion"
           >
             {isOpen ? (
@@ -74,7 +73,6 @@ export default function ServicesDrawer({
           <button
             className="text-2xl lg:text-4xl font-thin"
             onClick={toggleDrawer}
-            id="open-and-close-accordion"
             aria-label="open-and-close-accordion"
           >
             {isOpen ? (
