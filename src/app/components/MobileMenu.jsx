@@ -35,13 +35,19 @@ export default function MobileMenu() {
             : "lg:hidden flex flex-row gap-4 absolute top-5 right-5"
         }
       >
-        <button onClick={toggleMobileMenu}>
+        <button
+          id="open-mobile-menu"
+          aria-label="open-mobile-menu"
+          onClick={toggleMobileMenu}
+        >
           <AiOutlineMenu className="h-6 w-6" />
         </button>
       </div>
 
       {isMobileMenuOpen && (
         <button
+          id="close-mobile-menu"
+          aria-label="close-mobile-menu"
           onClick={toggleMobileMenu}
           className="lg:hidden absolute top-5 right-5 z-[9998] animate__animated animate__rotateIn"
         >

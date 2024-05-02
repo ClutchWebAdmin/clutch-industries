@@ -34,6 +34,8 @@ export default function TheFooter() {
                 href="https://maps.app.goo.gl/T4G1YyNEN6DVYq7d9"
                 target="_blank"
                 className="text-base hover:text-clutchBlue-200"
+                id="map-icon"
+                aria-label="Go to google maps"
               >
                 360 Belmont St NE <br />
                 Salem, OR 97301
@@ -45,6 +47,8 @@ export default function TheFooter() {
                 className="text-base hover:text-clutchBlue-200"
                 href="tel:+15039675228"
                 target="_blank"
+                id="phone-icon"
+                aria-label="Call us at 503-967-5228"
               >
                 503-967-5228
               </a>
@@ -55,6 +59,8 @@ export default function TheFooter() {
                 className="text-base hover:text-clutchBlue-200"
                 href="mailto:office@clutchindustries.com"
                 target="_blank"
+                id="email-icon"
+                aria-label="Email us at office@clutchindustries.com"
               >
                 office@clutchindustries.com
               </a>
@@ -66,6 +72,8 @@ export default function TheFooter() {
               href="https://www.linkedin.com/company/clutch-industries-inc/"
               className="hover:text-clutchBlue-200"
               target="_blank"
+              id="linkedin-icon"
+              aria-label="Find us on LinkedIn"
             >
               <FaLinkedin />
             </a>
@@ -73,6 +81,8 @@ export default function TheFooter() {
               href="https://www.facebook.com/Clutch.Industries.Oregon/"
               className="hover:text-clutchBlue-200"
               target="_blank"
+              id="facebook-icon"
+              aria-label="Find us on Facebook"
             >
               <FaFacebook />
             </a>
@@ -80,6 +90,8 @@ export default function TheFooter() {
               href="https://twitter.com/clutch90588373"
               className="hover:text-clutchBlue-200"
               target="_blank"
+              id="twitter-icon"
+              aria-label="Find us on Twitter"
             >
               <FaTwitter />
             </a>
@@ -87,6 +99,8 @@ export default function TheFooter() {
               href="https://www.instagram.com/theclutchindustries/"
               className="hover:text-clutchBlue-200"
               target="_blank"
+              id="instagram-icon"
+              aria-label="Find us on Instagram"
             >
               <FaInstagram />
             </a>

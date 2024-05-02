@@ -28,6 +28,7 @@ export default function NavDropdown({ mainLinkText, linkTo, dropdownArray }) {
       <button
         onClick={togglePropertiesDropdown}
         className=" hover:text-clutchBlue-500 flex flex-row items-center gap-2 p-2 uppercase"
+        aria-label="Open dropdown menu"
       >
         <Link href={linkTo}>{mainLinkText}</Link>
         <div>
@@ -42,6 +43,7 @@ export default function NavDropdown({ mainLinkText, linkTo, dropdownArray }) {
                 key={index}
                 href={item.linkTo}
                 className="border border-transparent hover:border hover:border-clutchBlue-500 hover:text-clutchBlue-500 p-2"
+                aria-label="Nav item"
               >
                 {item.text}
               </Link>

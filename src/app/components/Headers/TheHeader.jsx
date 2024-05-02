@@ -16,7 +16,11 @@ export default function TheHeader() {
       className={`${oxanium.className} flex flex-row w-full z-50 text-clutchBlue-900`}
     >
       <nav className="flex flex-row w-full h-fit lg:items-center justify-between m-5">
-        <Link href="/" className="lg:w-1/5 flex-grow">
+        <Link
+          href="/"
+          className="lg:w-1/5 flex-grow"
+          aria-label="Go to home page"
+        >
           <ClutchLogoSVG color1="#000000" color2="#2e3f8e" />
         </Link>
 
