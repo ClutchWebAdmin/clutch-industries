@@ -7,6 +7,7 @@ import StatsSection from "./components/StatsSection";
 import PhotoLeftTextRightSection from "./components/PhotoLeftTextRightSection";
 import TextAndLinkSection from "./components/TextAndLinkSection";
 import DrawerSection from "./components/DrawerSection";
+import TriplePhotoSection from "./components/TriplePhotoSection";
 
 export const metadata = {
   title: "Clutch Industries | Construction, Investment, Management",
@@ -83,37 +84,15 @@ export default function Home() {
           />
         </DrawerSection>
 
-        <section
-          id="our-properties"
-          className="flex flex-col gap-6 lg:gap-10 h-fit"
-        >
-          <div className="flex flex-col lg:flex-row justify-between w-full">
-            <Link
-              href="/projects/#commercial"
-              className="flex w-full lg:w-1/3 bg-gray-400 hover:brightness-105 h-[350px] lg:h-[500px] p-5"
-            >
-              <h4 className="text-2xl font-medium text-white">
-                Commercial Projects
-              </h4>
-            </Link>
-            <Link
-              href="/projects/#residential"
-              className="flex w-full lg:w-1/3 bg-gray-500 hover:brightness-105 h-[350px] lg:h-[500px] p-5"
-            >
-              <h4 className="text-2xl font-medium text-white">
-                Residential Projects
-              </h4>
-            </Link>
-            <Link
-              href="/projects/#mixed-use"
-              className="flex w-full lg:w-1/3 bg-gray-600 hover:brightness-105 h-[350px] lg:h-[500px] p-5"
-            >
-              <h4 className="text-2xl font-medium text-white">
-                Mixed-Use Projects
-              </h4>
-            </Link>
-          </div>
-        </section>
+        <TriplePhotoSection
+          id="project-types"
+          heading1="Commercial Projects"
+          linkTo1="/projects/#commercial"
+          heading2="Residential Projects"
+          linkTo2="/projects/#residential"
+          heading3="Mixed-Use Projects"
+          linkTo3="/projects/#mixed-use"
+        />
 
         <TextAndLinkSection
           heading="Want to work with us?"
