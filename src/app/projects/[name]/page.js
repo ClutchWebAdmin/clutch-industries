@@ -67,7 +67,6 @@ export default async function ProjectDetailsPage({ params }) {
       'conclusion': projectDetails.conclusion,
       'units': projectDetails.units,
       'projectStart': projectTimeline.constructionStart,
-      'projectStartNotes': projectTimeline.constructionStartNotes,
       'projectEnd': projectTimeline.constructionEnd,
       'projectEndNotes': projectTimeline.constructionEndNotes,
       'imageUrl': photo.asset->url,
@@ -116,31 +115,19 @@ export default async function ProjectDetailsPage({ params }) {
     year: "numeric",
   });
 
-  const labels = {
-    Studio: "Studio",
-    OneBedroom: "1BR",
-    TwoBedroom: "2BR",
-    ThreeBedroom: "3BR",
-    Garages: "Garages",
-  };
-
-  const renderedUnits = Object.entries(unitsObject).map(([type, count]) => {
-    const label = labels[type] || type;
-    return (
-      <li key={type} className={`${barlow.className} lg:text-lg`}>
-        {label}: {count}
-      </li>
-    );
-  });
+  const totalUnits = Object.values(unitsObject).reduce(
+    (total, count) => total + count,
+    0
+  );
 
   return (
     <main>
-      <div className="grid grid-cols-2 lg:grid-cols-12 gap-x-16 gap-y-8 h-full px-5 lg:px-10 py-10 lg:py-20">
-        <h1 className="col-span-full text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-medium text-clutchBlue-800 order-1">
+      <div className="grid grid-cols-2 lg:grid-cols-12 gap-x-16 gap-y-8 lg:gap-16 h-full px-5 lg:px-10 py-10 lg:py-20">
+        <h1 className="col-span-full text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-medium text-clutchBlue-800 order-1 -mb-4 lg:-mb-8">
           {projectName}
         </h1>
 
-        <div className="col-span-full relative order-2 lg:order-3">
+        <div className="col-span-full relative order-2 lg:order-3 -mb-4 lg:-mb-8">
           <Image
             src={imageUrl}
             alt={projectName}
@@ -156,7 +143,7 @@ export default async function ProjectDetailsPage({ params }) {
         </div>
 
         <div
-          className="col-span-full order-4 lg:order-2 grid grid-cols-2 lg:grid-cols-4 gap-x-16 gap-y-8"
+          className="col-span-full order-4 lg:order-2 grid grid-cols-2 lg:grid-cols-4 gap-x-16 gap-y-8 lg:gap-16 lg:-mb-8"
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-once="true"
@@ -171,8 +158,8 @@ export default async function ProjectDetailsPage({ params }) {
           </div>
 
           <div className="flex flex-col gap-0.5">
-            <h3 className="font-medium lg:text-lg">Units</h3>
-            <ul>{renderedUnits}</ul>
+            <h3 className="font-medium lg:text-lg">Total Units</h3>
+            <ul>{totalUnits}</ul>
           </div>
 
           <div className="flex flex-col gap-0.5">
@@ -182,7 +169,7 @@ export default async function ProjectDetailsPage({ params }) {
         </div>
 
         <div
-          className="col-span-full order-3 grid grid-cols-2 lg:grid-cols-4 gap-x-16 gap-y-8"
+          className="col-span-full order-3 grid grid-cols-2 lg:grid-cols-4 gap-x-16 gap-y-8 lg:gap-16"
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-once="true"
@@ -190,7 +177,7 @@ export default async function ProjectDetailsPage({ params }) {
           <p className="col-span-full lg:col-span-2 text-xl lg:text-2xl xl:text-3xl lg:text-justify">
             {introduction}
           </p>
-          <div className="col-span-full lg:col-span-2 grid grid-cols-2 gap-8">
+          <div className="col-span-full lg:col-span-2 grid grid-cols-2 gap-x-16 gap-y-8 lg:gap-16">
             <div className="flex flex-col gap-0.5">
               <h3 className="font-medium lg:text-lg">Project Start</h3>
               <p className="lg:text-lg">{formattedStartDate}</p>
@@ -207,7 +194,7 @@ export default async function ProjectDetailsPage({ params }) {
         </div>
 
         <div
-          className="col-span-full order-4 grid grid-cols-2 lg:grid-cols-4 gap-x-16 gap-y-8"
+          className="col-span-full order-4 grid grid-cols-2 lg:grid-cols-4 gap-x-16 gap-y-8 lg:gap-16"
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-once="true"
