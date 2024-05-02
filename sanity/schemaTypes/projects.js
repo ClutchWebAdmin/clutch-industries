@@ -131,6 +131,7 @@ export default {
           name: "squareFootage",
           title: "Square Footage",
           type: "number",
+          validation: (rule) => rule.required(),
         },
         {
           name: "strategicImportance",

@@ -66,6 +66,7 @@ export default async function ProjectDetailsPage({ params }) {
       'strategicImportance': projectDetails.strategicImportance,
       'conclusion': projectDetails.conclusion,
       'units': projectDetails.units,
+      'squareFootage': projectDetails.squareFootage,
       'projectStart': projectTimeline.constructionStart,
       'projectEnd': projectTimeline.constructionEnd,
       'projectEndNotes': projectTimeline.constructionEndNotes,
@@ -84,6 +85,7 @@ export default async function ProjectDetailsPage({ params }) {
   const blurDataUrl = data[0]?.blurDataUrl;
   const projectName = data[0]?.projectName;
   const unitsObject = data[0]?.units;
+  const squareFootage = data[0]?.squareFootage;
   const projectStart = data[0]?.projectStart;
   const projectEnd = data[0]?.projectEnd;
   const projectEndNotes = data[0]?.projectEndNotes;
@@ -115,10 +117,22 @@ export default async function ProjectDetailsPage({ params }) {
     year: "numeric",
   });
 
-  const totalUnits = Object.values(unitsObject).reduce(
-    (total, count) => total + count,
-    0
-  );
+  let formattedSquareFootage;
+  if (squareFootage) {
+    formattedSquareFootage = squareFootage.toLocaleString();
+  } else {
+    formattedSquareFootage = "N/A";
+  }
+
+  let totalUnits;
+  if (unitsObject) {
+    totalUnits = Object.values(unitsObject).reduce(
+      (total, count) => total + count,
+      0
+    );
+  } else {
+    totalUnits = "N/A";
+  }
 
   return (
     <main>
@@ -159,12 +173,12 @@ export default async function ProjectDetailsPage({ params }) {
 
           <div className="flex flex-col gap-0.5">
             <h3 className="font-medium lg:text-lg">Total Units</h3>
-            <ul>{totalUnits}</ul>
+            <p>{totalUnits}</p>
           </div>
 
           <div className="flex flex-col gap-0.5">
             <h3 className="font-medium lg:text-lg">Square Footage</h3>
-            <p className="lg:text-lg">#XXXXXX</p>
+            <p className="lg:text-lg">{formattedSquareFootage}</p>
           </div>
         </div>
 
