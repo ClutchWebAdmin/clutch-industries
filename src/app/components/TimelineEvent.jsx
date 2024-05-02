@@ -36,7 +36,7 @@ export default function TimelineEvent({ variant, timelineEvent }) {
             <div className="flex flex-col gap-0.5">
               <h5 className="text-xl lg:text-4xl">{timelineEvent.milestone}</h5>
               <Link
-                href={timelineEvent.slug}
+                href={`/projects/${timelineEvent.slug}`}
                 className={`${barlow.className} text-clutchBlue-200 hover:text-clutchBlue-100 transition duration-200 underline underline-offset-4`}
               >
                 View details
@@ -76,7 +76,7 @@ export default function TimelineEvent({ variant, timelineEvent }) {
             <div className="flex flex-col gap-0.5">
               <h5 className="text-xl lg:text-4xl">{timelineEvent.milestone}</h5>
               <Link
-                href={timelineEvent.slug}
+                href={`/projects/${timelineEvent.slug}`}
                 className={`${barlow.className} text-clutchBlue-200 hover:text-clutchBlue-100 transition duration-200 underline underline-offset-4`}
               >
                 View details
