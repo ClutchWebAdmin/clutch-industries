@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { oxanium } from "../styles/fonts";
 
-const maxProjectsCompleted = 20;
+const maxProjectsCompleted = 8;
 const maxSquareFootage = 321456;
 const maxPlaceholder = 54320;
 
@@ -24,7 +24,7 @@ export default function StatsSection() {
         if (projectsCompleted < maxProjectsCompleted) {
           setProjectsCompleted((prevCount) => prevCount + 1);
         }
-      }, 150);
+      }, 200);
 
       return () => {
         clearInterval(projectsInterval);
