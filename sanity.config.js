@@ -20,9 +20,5 @@ export default defineConfig({
         visionTool({ defaultApiVersion: apiVersion }),
         vercelDeployTool(),
       ]
-    : [
-        structureTool(),
-        visionTool({ defaultApiVersion: apiVersion }),
-        vercelDeployTool(),
-      ],
+    : [structureTool(), vercelDeployTool()],
 });
