@@ -21,8 +21,10 @@ export default function PropertyCard({ project }) {
           {project.status}
         </p>
         <div className="flex flex-col gap-0.5 bg-clutchBlue-900 backdrop-blur-md w-full h-fit px-4 py-4 relative">
-          <h5 className="font-medium text-white">{project.projectTitle}</h5>
-          <p className="text-clutchBlue-100 text-xs md:text-sm">
+          <h5 className="font-medium 2xl:text-xl text-white">
+            {project.projectTitle}
+          </h5>
+          <p className="text-clutchBlue-100 text-xs md:text-sm 2xl:text-base">
             {project.location}
           </p>
         </div>

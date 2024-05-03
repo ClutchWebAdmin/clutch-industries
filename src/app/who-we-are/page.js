@@ -9,7 +9,7 @@ export default function WhoWeArePage() {
   return (
     <main>
       <PhotoLeftTextRightSection
-        id="team"
+        id="about-us"
         photoUrl={teamPhoto}
         altText="Team photo"
         heading="About Us"
@@ -24,7 +24,7 @@ export default function WhoWeArePage() {
         className="flex flex-col gap-8 lg:gap-16 bg-clutchBlue-800 text-white px-5 lg:px-10 py-10 lg:py-20"
       >
         <div
-          className="flex flex-col gap-6 w-full"
+          className="flex flex-col gap-6 w-full xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto"
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-once="true"
@@ -45,13 +45,13 @@ export default function WhoWeArePage() {
       />
 
       <section
-        id="team-members"
-        className="flex flex-col gap-10 h-fit w-full md:w-5/6 mx-auto px-5 md:px-0 py-10 lg:py-20"
+        id="team"
+        className="flex flex-col gap-10 h-fit w-full md:w-5/6 px-5 md:px-0 py-10 lg:py-20 xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto"
       >
         <h2 className="text-4xl md:text-7xl 2xl:text-8xl text-center">
           Our Team
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-6 md:gap-10">
           {teamMembersArray.map((item, index) => (
             <figure key={index} className="relative col-span-1 shadow-lg">
               <TeamMemberCard

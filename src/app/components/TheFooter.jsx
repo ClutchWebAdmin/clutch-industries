@@ -22,7 +22,7 @@ export default function TheFooter() {
       id="footer"
       className={`${oxanium.className} flex-shrink-0 justify-between px-5 lg:px-10 pt-12 lg:pt-14 pb-4 w-full bg-clutchBlue-900 text-white h-fit`}
     >
-      <div className="grid gap-12 lg:gap-x-0 lg:gap-y-12 grid-cols-2 lg:grid-cols-4 w-fit lg:w-full mx-auto">
+      <div className="grid gap-12 lg:gap-x-0 lg:gap-y-12 grid-cols-2 lg:grid-cols-4 xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto">
         <div className="flex flex-col gap-10 justify-between col-span-2 lg:col-span-1">
           <Link href="/">
             <ClutchLogoSVG color1="#FFFFFF" color2="#7d88d5" />

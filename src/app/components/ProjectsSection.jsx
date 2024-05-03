@@ -23,9 +23,9 @@ export default async function ProjectsSection({ queryFilter, id }) {
   return (
     <section
       id={id}
-      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-8"
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-8 w-full mx-auto"
     >
-      <h4 className="col-span-full text-2xl font-medium">
+      <h4 className="col-span-full text-2xl 2xl:text-3xl font-medium">
         {queryFilter} Properties
       </h4>
       {projectData.map((project, index) => (
