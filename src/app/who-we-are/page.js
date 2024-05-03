@@ -2,10 +2,26 @@ import PhotoLeftTextRightSection from "../components/PhotoLeftTextRightSection";
 import teamPhoto from "../../../public/images/clutch-leadership.png";
 import TextAndLinkSection from "../components/TextAndLinkSection";
 import TeamMemberCard from "../components/TeamMemberCard";
-import { teamMembersArray } from "../data/TeamMembers";
 import TimelineSection from "../components/TimelineSection";
+import { client } from "../../../sanity/lib/client";
 
-export default function WhoWeArePage() {
+export default async function WhoWeArePage() {
+  const data = await client.fetch(`
+    *[_type == "team"]{
+      teamMembers[]{
+        fullName,
+        title,
+        email,
+        'imageUrl': photo.asset->url,
+        'blurDataURL': photo.asset->metadata.lqip,
+        'height': photo.asset->metadata.dimensions.height,
+        'width': photo.asset->metadata.dimensions.width,
+      }
+    }
+  `);
+
+  const teamMembersArray = data[0]?.teamMembers;
+
   return (
     <main>
       <PhotoLeftTextRightSection
@@ -52,13 +68,16 @@ export default function WhoWeArePage() {
           Our Team
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-6 md:gap-10">
-          {teamMembersArray.map((item, index) => (
+          {teamMembersArray.map((member, index) => (
             <figure key={index} className="relative col-span-1 shadow-lg">
               <TeamMemberCard
-                fullName={item.fullName}
-                photoUrl={item.photo}
-                title={item.title}
-                email={item.email}
+                fullName={member.fullName}
+                photoUrl={member.imageUrl}
+                blurDataURL={member.blurDataURL}
+                height={member.height}
+                width={member.width}
+                title={member.title}
+                email={member.email}
               />
             </figure>
           ))}
