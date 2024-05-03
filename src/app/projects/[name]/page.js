@@ -238,12 +238,7 @@ export default async function ProjectDetailsPage({ params }) {
           </div>
         </div>
 
-        <div
-          className="col-span-full order-5 flex flex-row justify-between mt-8"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-once="true"
-        >
+        <div className="col-span-full order-5 flex flex-row justify-between mt-8">
           <div className="flex w-1/2 justify-start">
             <Link
               href={`/projects/${slugArray[prevIndex].slug}`}
