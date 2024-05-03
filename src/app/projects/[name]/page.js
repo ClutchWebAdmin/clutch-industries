@@ -1,7 +1,8 @@
 import { client } from "../../../../sanity/lib/client";
 import TextAndLinkSection from "@/app/components/TextAndLinkSection";
 import Image from "next/image";
-import { barlow } from "@/app/styles/fonts";
+import Link from "next/link";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
 export async function generateMetadata({ params }) {
   const { name } = params;
@@ -57,44 +58,58 @@ export default async function ProjectDetailsPage({ params }) {
 
   const data = await client.fetch(
     `
-    *[_type == "projects" && $name == slug.current]{
-      'projectName': projectTitle,
-      introduction,
-      status,
-      'projectType': projectDetails.projectType,
-      'location': projectDetails.location,
-      'strategicImportance': projectDetails.strategicImportance,
-      'conclusion': projectDetails.conclusion,
-      'units': projectDetails.units,
-      'squareFootage': projectDetails.squareFootage,
-      'projectStart': projectTimeline.constructionStart,
-      'projectEnd': projectTimeline.constructionEnd,
-      'projectEndNotes': projectTimeline.constructionEndNotes,
-      'imageUrl': photo.asset->url,
-      'height': photo.asset->metadata.dimensions.height,
-      'width': photo.asset->metadata.dimensions.width,
-      'blurDataUrl': photo.asset->metadata.lqip,
+    {
+      "projectDetails": *[_type == "projects" && $name == slug.current]{
+        'projectName': projectTitle,
+        introduction,
+        status,
+        'projectType': projectDetails.projectType,
+        'location': projectDetails.location,
+        'strategicImportance': projectDetails.strategicImportance,
+        'conclusion': projectDetails.conclusion,
+        'units': projectDetails.units,
+        'squareFootage': projectDetails.squareFootage,
+        'projectStart': projectTimeline.constructionStart,
+        'projectEnd': projectTimeline.constructionEnd,
+        'projectEndNotes': projectTimeline.constructionEndNotes,
+        'imageUrl': photo.asset->url,
+        'height': photo.asset->metadata.dimensions.height,
+        'width': photo.asset->metadata.dimensions.width,
+        'blurDataUrl': photo.asset->metadata.lqip,
+      },
+      "projectSlugs": *[_type == "projects"]{
+        "slug": slug.current,
+        projectTitle
+      }
     }
   `,
     { name }
   );
 
-  const imageUrl = data[0]?.imageUrl;
-  const height = data[0]?.height;
-  const width = data[0]?.width;
-  const blurDataUrl = data[0]?.blurDataUrl;
-  const projectName = data[0]?.projectName;
-  const unitsObject = data[0]?.units;
-  const squareFootage = data[0]?.squareFootage;
-  const projectStart = data[0]?.projectStart;
-  const projectEnd = data[0]?.projectEnd;
-  const projectEndNotes = data[0]?.projectEndNotes;
-  const introduction = data[0]?.introduction;
-  const status = data[0]?.status;
-  const projectTypeRaw = data[0]?.projectType;
-  const location = data[0]?.location;
-  const strategicImportance = data[0]?.strategicImportance;
-  const conclusion = data[0]?.conclusion;
+  const projectDetails = data?.projectDetails[0];
+
+  const slugArray = data?.projectSlugs;
+
+  const currentIndex = slugArray.findIndex((item) => item.slug === name);
+  const prevIndex = currentIndex > 0 ? currentIndex - 1 : slugArray.length - 1;
+  const nextIndex = currentIndex < slugArray.length - 1 ? currentIndex + 1 : 0;
+
+  const imageUrl = projectDetails.imageUrl;
+  const height = projectDetails.height;
+  const width = projectDetails.width;
+  const blurDataUrl = projectDetails.blurDataUrl;
+  const projectName = projectDetails.projectName;
+  const unitsObject = projectDetails.units;
+  const squareFootage = projectDetails.squareFootage;
+  const projectStart = projectDetails.projectStart;
+  const projectEnd = projectDetails.projectEnd;
+  const projectEndNotes = projectDetails.projectEndNotes;
+  const introduction = projectDetails.introduction;
+  const status = projectDetails.status;
+  const projectTypeRaw = projectDetails.projectType;
+  const location = projectDetails.location;
+  const strategicImportance = projectDetails.strategicImportance;
+  const conclusion = projectDetails.conclusion;
 
   let formattedProjectType;
   if (projectTypeRaw === "residential") {
@@ -222,8 +237,43 @@ export default async function ProjectDetailsPage({ params }) {
             <p className="lg:text-lg">{conclusion}</p>
           </div>
         </div>
-      </div>
 
+        <div
+          className="col-span-full order-5 flex flex-row justify-between mt-8"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
+          <div className="flex w-1/2 justify-start">
+            <Link
+              href={`/projects/${slugArray[prevIndex].slug}`}
+              className="flex flex-col gap-2 hover:opacity-80 transition duration-200 w-fit justify-start items-start"
+            >
+              <div className="flex flex-row items-center justify-start gap-1 text-gray-600">
+                <FaArrowLeft />
+                <p>Previous</p>
+              </div>
+              <h6 className="flex justify-start text-left text-sm lg:text-base">
+                {slugArray[prevIndex].projectTitle}
+              </h6>
+            </Link>
+          </div>
+          <div className="flex w-1/2 justify-end">
+            <Link
+              href={`/projects/${slugArray[nextIndex].slug}`}
+              className="flex flex-col gap-2 hover:opacity-80 transition duration-200 w-fit items-end justify-start"
+            >
+              <div className="flex flex-row items-center gap-1 justify-end text-gray-600">
+                <p>Next</p>
+                <FaArrowRight />
+              </div>
+              <h6 className="flex justify-end text-right text-sm lg:text-base">
+                {slugArray[nextIndex].projectTitle}
+              </h6>
+            </Link>
+          </div>
+        </div>
+      </div>
       <TextAndLinkSection
         heading="Want to work with us?"
         buttonText="Get in touch"
