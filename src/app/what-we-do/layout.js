@@ -1,3 +1,4 @@
+import Breadcrumbs from "../components/Breadcrumbs";
 import TheHeader from "../components/Headers/TheHeader";
 
 export const metadata = {
@@ -33,6 +34,7 @@ export default function Layout({ children }) {
   return (
     <>
       <TheHeader />
+      <Breadcrumbs />
       {children}
     </>
   );

@@ -1,4 +1,5 @@
 import TheHeader from "../components/Headers/TheHeader";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 export const metadata = {
   title: "Clutch Industries | Projects",
@@ -33,6 +34,7 @@ export default function Layout({ children }) {
   return (
     <>
       <TheHeader />
+      <Breadcrumbs />
       {children}
     </>
   );
