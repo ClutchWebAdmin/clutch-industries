@@ -37,7 +37,7 @@ export default async function WhoWeArePage() {
 
       <section
         id="history"
-        className="flex flex-col gap-8 lg:gap-16 bg-clutchBlue-800 text-white px-5 lg:px-10 py-10 lg:py-20"
+        className="flex flex-col gap-8 lg:gap-16 bg-clutchBlue-800 text-white py-10 lg:py-20"
       >
         <div
           className="flex flex-col gap-6 w-full xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto"

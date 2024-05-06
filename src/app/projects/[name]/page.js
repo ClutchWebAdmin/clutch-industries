@@ -151,7 +151,7 @@ export default async function ProjectDetailsPage({ params }) {
 
   return (
     <main>
-      <div className="grid grid-cols-2 lg:grid-cols-12 gap-x-16 gap-y-8 lg:gap-16 h-full px-5 lg:px-10 py-10 lg:py-20 xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto">
+      <div className="grid grid-cols-2 lg:grid-cols-12 gap-x-16 gap-y-8 lg:gap-16 h-full py-10 lg:py-20 xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto">
         <h1 className="col-span-full text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-medium text-clutchBlue-900 order-1 -mb-4 lg:-mb-8">
           {projectName}
         </h1>
