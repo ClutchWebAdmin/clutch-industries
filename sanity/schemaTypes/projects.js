@@ -22,6 +22,7 @@ export default {
       name: "milestone",
       title: "Milestone",
       type: "string",
+      validation: (rule) => rule.required(),
     },
     {
       name: "includeInTimeline",
@@ -65,11 +66,6 @@ export default {
           validation: (rule) => rule.required(),
         },
         {
-          name: "constructionStartNotes",
-          title: "Construction Start Notes",
-          type: "string",
-        },
-        {
           name: "constructionEnd",
           title: "Construction End",
           type: "date",
@@ -79,8 +75,8 @@ export default {
           validation: (rule) => rule.required(),
         },
         {
-          name: "constructionEndNotes",
-          title: "Construction End Notes",
+          name: "constructionNotes",
+          title: "Construction Notes",
           type: "string",
           validation: (rule) => rule.required(),
         },

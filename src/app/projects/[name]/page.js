@@ -71,7 +71,7 @@ export default async function ProjectDetailsPage({ params }) {
         'squareFootage': projectDetails.squareFootage,
         'projectStart': projectTimeline.constructionStart,
         'projectEnd': projectTimeline.constructionEnd,
-        'projectEndNotes': projectTimeline.constructionEndNotes,
+        'constructionNotes': projectTimeline.constructionNotes,
         'imageUrl': photo.asset->url,
         'height': photo.asset->metadata.dimensions.height,
         'width': photo.asset->metadata.dimensions.width,
@@ -103,7 +103,7 @@ export default async function ProjectDetailsPage({ params }) {
   const squareFootage = projectDetails.squareFootage;
   const projectStart = projectDetails.projectStart;
   const projectEnd = projectDetails.projectEnd;
-  const projectEndNotes = projectDetails.projectEndNotes;
+  const constructionNotes = projectDetails.constructionNotes;
   const introduction = projectDetails.introduction;
   const status = projectDetails.status;
   const projectTypeRaw = projectDetails.projectType;
@@ -217,7 +217,7 @@ export default async function ProjectDetailsPage({ params }) {
             </div>
             <div className="flex flex-col gap-0.5 col-span-full">
               <h3 className="font-medium lg:text-lg">Project Notes</h3>
-              <p className="lg:text-lg">{projectEndNotes}</p>
+              <p className="lg:text-lg">{constructionNotes}</p>
             </div>
           </div>
         </div>
