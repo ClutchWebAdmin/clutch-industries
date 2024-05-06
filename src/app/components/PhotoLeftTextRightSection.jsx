@@ -31,6 +31,7 @@ export default function PhotoLeftTextRightSection({
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-once="true"
+              className="object-cover w-fit h-auto mx-auto"
             />
           </div>
           <div
@@ -61,7 +62,11 @@ export default function PhotoLeftTextRightSection({
             data-aos-duration="1000"
             data-aos-once="true"
           >
-            <Image src={photoUrl} alt={altText} />
+            <Image
+              src={photoUrl}
+              alt={altText}
+              className="object-cover w-fit h-auto mx-auto"
+            />
           </div>
           <div
             className="flex flex-col gap-2 w-full lg:w-1/2"

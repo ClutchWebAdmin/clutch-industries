@@ -37,7 +37,11 @@ export default function PhotoRightTextLeftSection({
             data-aos-duration="1000"
             data-aos-once="true"
           >
-            <Image src={photoUrl} alt={altText} />
+            <Image
+              src={photoUrl}
+              alt={altText}
+              className="object-cover w-fit h-auto mx-auto"
+            />
           </div>
         </div>
       </section>
@@ -67,7 +71,11 @@ export default function PhotoRightTextLeftSection({
             data-aos-duration="1000"
             data-aos-once="true"
           >
-            <Image src={photoUrl} alt={altText} />
+            <Image
+              src={photoUrl}
+              alt={altText}
+              className="object-cover w-fit h-auto mx-auto"
+            />
           </div>
         </div>
       </section>
