@@ -56,7 +56,7 @@ export default function Home() {
           photoUrl={teamPhoto}
           altText="Team photo"
           heading="Our Team"
-          paragraph="Here at Clutch Industries, we have an unwavering commitment to great service and quality in every thing that we do. Meet the team that makes it all possible."
+          paragraph="At Clutch Industries, our dedication to exceptional service and top-notch quality permeates every aspect of our operations. Our team embodies this ethos, with each member bringing unique skills, expertise, and passion to the table. Together, we strive to exceed expectations, foster innovation, and build lasting relationships with our clients. Our unwavering commitment to excellence drives us forward, ensuring that we consistently deliver outstanding results and maintain our position as leaders in our industry."
           buttonText="About Us"
           linkTo="/who-we-are"
           variant="light"
