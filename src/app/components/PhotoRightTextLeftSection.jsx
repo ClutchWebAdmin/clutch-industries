@@ -40,7 +40,7 @@ export default function PhotoRightTextLeftSection({
             <Image
               src={photoUrl}
               alt={altText}
-              className="object-cover w-fit h-auto mx-auto"
+              className="object-cover w-full h-auto mx-auto"
             />
           </div>
         </div>
@@ -74,7 +74,7 @@ export default function PhotoRightTextLeftSection({
             <Image
               src={photoUrl}
               alt={altText}
-              className="object-cover w-fit h-auto mx-auto"
+              className="object-cover w-full h-auto mx-auto"
             />
           </div>
         </div>

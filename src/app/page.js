@@ -1,6 +1,5 @@
 import Hero from "./components/Hero";
 import ServicesDrawer from "./components/ServicesDrawer";
-import Link from "next/link";
 import teamPhoto from "../../public/images/clutch-team-photo.png";
 import TheHomeHeader from "./components/Headers/TheHomeHeader";
 import StatsSection from "./components/StatsSection";
@@ -8,6 +7,9 @@ import PhotoLeftTextRightSection from "./components/PhotoLeftTextRightSection";
 import TextAndLinkSection from "./components/TextAndLinkSection";
 import DrawerSection from "./components/DrawerSection";
 import TriplePhotoSection from "./components/TriplePhotoSection";
+import commercialThumbnail from "../../public/images/commercial-thumbnail.png";
+import residentialThumbnail from "../../public/images/residential-thumbnail.png";
+import mixedUseThumbnail from "../../public/images/mixed-use-thumbnail.png";
 
 export const metadata = {
   title: "Clutch Industries | Construction, Investment, Management",
@@ -86,11 +88,14 @@ export default function Home() {
 
         <TriplePhotoSection
           id="project-types"
-          heading1="Commercial Projects"
+          image1={commercialThumbnail}
+          heading1="Commercial Spaces"
           linkTo1="/projects/#commercial"
-          heading2="Residential Projects"
+          image2={residentialThumbnail}
+          heading2="Residential Spaces"
           linkTo2="/projects/#residential"
-          heading3="Mixed-Use Projects"
+          image3={mixedUseThumbnail}
+          heading3="Mixed-Use Spaces"
           linkTo3="/projects/#mixed-use"
         />
 

@@ -31,7 +31,7 @@ export default function PhotoLeftTextRightSection({
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-once="true"
-              className="object-cover w-fit h-auto mx-auto"
+              className="object-cover w-full h-auto mx-auto"
             />
           </div>
           <div
@@ -65,7 +65,7 @@ export default function PhotoLeftTextRightSection({
             <Image
               src={photoUrl}
               alt={altText}
-              className="object-cover w-fit h-auto mx-auto"
+              className="object-cover w-full h-auto mx-auto"
             />
           </div>
           <div
