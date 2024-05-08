@@ -16,7 +16,7 @@ export default async function TimelineSection() {
   `);
 
   return (
-    <div className="flex flex-col gap-y-16 lg:gap-y-20">
+    <div className="flex flex-col gap-y-16 lg:gap-y-20 px-5 lg:px-10">
       <div className="relative pt-8">
         <div className="border-r-2 border-gray-300 absolute h-full top-0 z-0 left-8 lg:left-1/2"></div>
 

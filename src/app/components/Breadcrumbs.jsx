@@ -10,7 +10,7 @@ export default function Breadcrumbs() {
 
   return (
     <nav
-      className={`${oxanium.className} capitalize text-sm md:text-base flex w-full xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto text-clutchBlue-800 mt-5 lg:mt-10 -mb-5 lg:-mb-10 z-20 px-5 lg:px-10 `}
+      className={`${oxanium.className} capitalize text-sm md:text-base flex w-full xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto text-clutchBlue-800 mt-5 lg:mt-10 -mb-5 lg:-mb-10 z-20 px-5 lg:px-10`}
     >
       <ul className="flex flex-wrap">
         <li>

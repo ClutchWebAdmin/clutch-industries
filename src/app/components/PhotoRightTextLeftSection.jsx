@@ -16,9 +16,9 @@ export default function PhotoRightTextLeftSection({
     return (
       <section
         id={id}
-        className="h-fit text-white bg-clutchBlue-900 px-5 lg:px-10 py-10 lg:py-20"
+        className="h-fit text-white bg-clutchBlue-900 py-10 lg:py-20"
       >
-        <div className="flex flex-col gap-6 lg:gap-10 lg:flex-row  xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto">
+        <div className="flex flex-col gap-6 lg:gap-10 w-full px-5 lg:px-10 lg:flex-row xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto">
           <div
             className="order-2 lg:order-1 flex flex-col gap-2 w-full lg:w-1/2"
             data-aos="fade-up"
@@ -50,9 +50,9 @@ export default function PhotoRightTextLeftSection({
     return (
       <section
         id={id}
-        className="h-fit text-clutchBlue-900 bg-white px-5 lg:px-10 py-10 lg:py-20"
+        className="h-fit text-clutchBlue-900 bg-white py-10 lg:py-20"
       >
-        <div className="flex flex-col gap-6 lg:gap-10 lg:flex-row  xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto">
+        <div className="flex flex-col gap-6 lg:gap-10 w-full px-5 lg:px-10 lg:flex-row xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto">
           <div
             className="order-2 lg:order-1 flex flex-col gap-2 w-full lg:w-1/2"
             data-aos="fade-up"
