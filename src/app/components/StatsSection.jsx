@@ -2,30 +2,32 @@ import { oxanium } from "../styles/fonts";
 import { client } from "../../../sanity/lib/client";
 
 export default async function StatsSection() {
-  let projectsCompleted;
-  let squareFootage;
-  let totalUnits;
+  const data = await client.fetch(`*[_type == "projects"]{
+    'squareFootage': projectDetails.squareFootage,
+    'unitsObject': projectDetails.units
+  }`);
 
   const formatNumberWithCommas = (number) => {
     return number.toLocaleString();
   };
 
-  const data = await client.fetch(`*[_type == "projects"]{
-        'squareFootage': projectDetails.squareFootage,
-        'unitsObject': projectDetails.units
-      }`);
-
   // Calculate the total number of projects
-  projectsCompleted = data.length;
+  const projectsCompleted = data.length;
+  const formattedProjectsCompleted = formatNumberWithCommas(projectsCompleted);
 
   // Calculate the sum of square footage
-  squareFootage = data.reduce((acc, project) => acc + project.squareFootage, 0);
+  const squareFootage = data.reduce(
+    (acc, project) => acc + project.squareFootage,
+    0
+  );
+  const formattedSquareFootage = formatNumberWithCommas(squareFootage);
 
   // Calculate the total number of units
-  totalUnits = data.reduce((acc, project) => {
+  const totalUnits = data.reduce((acc, project) => {
     const units = Object.values(project.unitsObject);
     return acc + units.reduce((unitAcc, unit) => unitAcc + unit, 0);
   }, 0);
+  const formattedTotalUnits = formatNumberWithCommas(totalUnits);
 
   return (
     <section className="grid grid-cols-1 lg:grid-cols-3 text-white h-fit">
@@ -41,9 +43,7 @@ export default async function StatsSection() {
             <h3 className={`${oxanium.className} text-lg font-semibold`}>
               Projects Completed
             </h3>
-            <p className="text-6xl">
-              {formatNumberWithCommas(projectsCompleted)}
-            </p>
+            <p className="text-6xl">{formattedProjectsCompleted}</p>
           </div>
 
           <div className="h-2 w-full bg-gray-700"></div>
@@ -62,7 +62,7 @@ export default async function StatsSection() {
             <h3 className={`${oxanium.className} text-lg font-semibold`}>
               Square Footage
             </h3>
-            <p className="text-6xl">{formatNumberWithCommas(squareFootage)}</p>
+            <p className="text-6xl">{formattedSquareFootage}</p>
           </div>
 
           <div className="h-2 w-full bg-gray-500"></div>
@@ -81,7 +81,7 @@ export default async function StatsSection() {
             <h3 className={`${oxanium.className} text-lg font-semibold`}>
               Total Units
             </h3>
-            <p className="text-6xl">{formatNumberWithCommas(totalUnits)}</p>
+            <p className="text-6xl">{formattedTotalUnits}</p>
           </div>
 
           <div className="h-2 w-full bg-gray-300"></div>
