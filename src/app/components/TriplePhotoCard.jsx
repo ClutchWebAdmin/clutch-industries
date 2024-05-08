@@ -31,7 +31,7 @@ export default function TriplePhotoCard({ imageUrl, linkTo, heading }) {
           {heading}
         </h4>
         <FaArrowRight
-          className={`transition duration-300 ${
+          className={`lg:mt-1.5 transition duration-300 ${
             isHovered ? "translate-x-2" : ""
           }`}
         />
