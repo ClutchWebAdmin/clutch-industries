@@ -61,7 +61,7 @@ export default function PhotoRightTextLeftSection({
           >
             <h2 className="text-4xl md:text-7xl 2xl:text-8xl">{heading}</h2>
             <div className="flex flex-col gap-6">
-              <p className="text-gray-500 2xl:text-lg">{paragraph}</p>
+              <p className="text-gray-600 2xl:text-lg">{paragraph}</p>
               <PrimaryLinkButton buttonText={buttonText} linkTo={linkTo} />
             </div>
           </div>

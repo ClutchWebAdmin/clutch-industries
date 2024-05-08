@@ -61,7 +61,7 @@ export default function ServicesDrawer({
     );
   } else if (variant === "light") {
     return (
-      <div className="relative border-b text-clutchBlue-900">
+      <div className="relative border-b border-gray-300 text-clutchBlue-900">
         <div
           className="flex flex-row items-center justify-between py-6"
           data-aos="fade-up"
