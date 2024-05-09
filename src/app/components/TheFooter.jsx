@@ -108,9 +108,12 @@ export default function TheFooter() {
         </div>
 
         <div className="flex flex-col gap-y-3 col-span-1 lg:mx-auto">
-          <p className="text-xl font-medium uppercase text-clutchBlue-300">
+          <Link
+            href="/who-we-are"
+            className="text-xl font-medium uppercase text-clutchBlue-300"
+          >
             Who We Are
-          </p>
+          </Link>
           <ul className="flex flex-col gap-2">
             {whoWeAreArray.map((item, index) => (
               <li key={index}>
@@ -123,9 +126,12 @@ export default function TheFooter() {
         </div>
 
         <div className="flex flex-col gap-y-3 col-span-1 lg:mx-auto">
-          <p className="text-xl font-medium uppercase text-clutchBlue-300">
+          <Link
+            href="/what-we-do"
+            className="text-xl font-medium uppercase text-clutchBlue-300"
+          >
             What We Do
-          </p>
+          </Link>
           <ul className="flex flex-col gap-2">
             {whatWeDoArray.map((item, index) => (
               <li key={index}>
@@ -138,9 +144,12 @@ export default function TheFooter() {
         </div>
 
         <div className="flex flex-col gap-y-3 col-span-2 lg:col-span-1 lg:mx-auto">
-          <p className="text-xl font-medium uppercase text-clutchBlue-300">
+          <Link
+            href="/projects"
+            className="text-xl font-medium uppercase text-clutchBlue-300"
+          >
             Our Projects
-          </p>
+          </Link>
           <ul className="flex flex-col gap-2">
             {ourProjectsArray.map((item, index) => (
               <li key={index}>

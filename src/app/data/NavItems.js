@@ -15,6 +15,10 @@ export const whoWeAreArray = [
 
 export const whatWeDoArray = [
   {
+    text: "Overview",
+    linkTo: "/what-we-do",
+  },
+  {
     text: "Construction",
     linkTo: "/what-we-do/#construction",
   },
