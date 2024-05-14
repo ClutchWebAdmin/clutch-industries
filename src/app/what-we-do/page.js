@@ -26,9 +26,9 @@ export default function WhatWeDoPage() {
           buttonText="Learn more"
         />
         <ServicesDrawer
-          service="Management"
-          description="We are dedicated to providing personalized and attentive care for each property under our management, fostering long-term tenant satisfaction and property value appreciation."
-          linkTo="#management"
+          service="Development"
+          description="We specialize in innovative development projects, transforming communities with forward-thinking designs and solutions. With a keen eye for emerging markets and strategic partnerships, we drive successful real estate developments that maximize value and potential."
+          linkTo="#development"
           variant="light"
           buttonText="Learn more"
         />
@@ -54,11 +54,11 @@ export default function WhatWeDoPage() {
         variant="light"
       />
       <PhotoLeftTextRightSection
-        id="management"
+        id="development"
         photoUrl={management}
-        altText="management"
-        heading="Management"
-        paragraph="We hold a steadfast commitment to delivering tailored and responsive management services for every property entrusted to our care. We prioritize individualized attention and proactive maintenance, ensuring that each tenant receives the highest level of service and support. By cultivating strong relationships with tenants and staying attuned to their needs, we foster a sense of community and mutual respect within our properties. Our dedication to excellence extends beyond day-to-day operations to encompass strategic planning and asset management, driving long-term value appreciation for property owners. With a focus on sustainability and innovation, we strive to create environments where tenants thrive and properties flourish, enriching the overall quality of life for all stakeholders involved."
+        altText="development"
+        heading="Development"
+        paragraph="Our development arm is the cornerstone of our company's vision, dedicated to shaping the future of urban landscapes through strategic planning and design. With a proven track record of successful projects, we leverage our expertise in market analysis, feasibility studies, and stakeholder engagement to identify prime opportunities for growth and transformation. From mixed-use developments that blend residential, commercial, and recreational spaces to sustainable urban revitalization projects, we take pride in creating vibrant and thriving communities. Our commitment to excellence drives us to collaborate with top architects, engineers, and planners, ensuring that each development project aligns with our core values of innovation and social responsibility."
         buttonText="View Projects"
         linkTo="/projects"
         variant="dark"

@@ -27,8 +27,8 @@ export const whatWeDoArray = [
     linkTo: "/what-we-do/#investment",
   },
   {
-    text: "Management",
-    linkTo: "/what-we-do/#management",
+    text: "Development",
+    linkTo: "/what-we-do/#development",
   },
 ];
 

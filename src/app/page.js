@@ -12,16 +12,16 @@ import residentialThumbnail from "../../public/images/residential-thumbnail.png"
 import mixedUseThumbnail from "../../public/images/mixed-use-thumbnail.png";
 
 export const metadata = {
-  title: "Clutch Industries | Construction, Investment, Management",
+  title: "Clutch Industries | Construction, Investment, Development",
   description:
     "Your full service construction experts in the Willamette Valley & beyond.",
   keywords:
-    "Salem, Oregon, construction, property management, investment, full service, willamette valley",
+    "Salem, Oregon, construction, property management, investment, development full service, willamette valley",
   openGraph: {
     title: "Clutch Industries | Construction, Investment, Management",
     description:
       "Your full service construction experts in the Willamette Valley & beyond.",
-    siteName: "Clutch Industries | Construction, Investment, Management",
+    siteName: "Clutch Industries | Construction, Investment, Development",
     type: "website",
     locale: "en_US",
     url: "https://clutchindustries.com",
@@ -78,8 +78,8 @@ export default function Home() {
             buttonText="Learn more"
           />
           <ServicesDrawer
-            service="Management"
-            description="We are dedicated to providing personalized and attentive care for each property under our management, fostering long-term tenant satisfaction and property value appreciation."
+            service="Development"
+            description="We specialize in innovative development projects, transforming communities with forward-thinking designs and solutions. With a keen eye for emerging markets and strategic partnerships, we drive successful real estate developments that maximize value and potential."
             linkTo="/what-we-do"
             variant="dark"
             buttonText="Learn more"
