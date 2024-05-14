@@ -6,12 +6,12 @@ export const metadata = {
   description:
     "Your full service construction experts in the Willamette Valley & beyond.",
   keywords:
-    "Salem, Oregon, construction, property management, investment, full service, willamette valley",
+    "Salem, Oregon, construction, investment, development, full service, willamette valley",
   openGraph: {
-    title: "Clutch Industries | Construction, Investment, Management",
+    title: "Clutch Industries | Construction, Investment, Development",
     description:
       "Your full service construction experts in the Willamette Valley & beyond.",
-    siteName: "Clutch Industries | Construction, Investment, Management",
+    siteName: "Clutch Industries | Construction, Investment, Development",
     type: "website",
     locale: "en_US",
     url: "https://clutchindustries.com",
