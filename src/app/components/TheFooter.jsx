@@ -161,7 +161,13 @@ export default function TheFooter() {
           </ul>
         </div>
 
-        <div className="col-span-full text-center text-xs">
+        <div className="flex flex-col gap-2 col-span-full text-center text-xs">
+          <Link
+            href="/terms"
+            className="hover:text-clutchBlue-300 transition duration-300"
+          >
+            Terms of Service
+          </Link>
           © 2024 Clutch Industries
         </div>
       </div>
