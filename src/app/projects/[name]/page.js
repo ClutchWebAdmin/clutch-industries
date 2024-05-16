@@ -188,7 +188,7 @@ export default async function ProjectDetailsPage({ params }) {
 
           <div className="flex flex-col gap-0.5">
             <h3 className="font-medium lg:text-lg">Total Units</h3>
-            <p>{totalUnits}</p>
+            <p className="lg:text-lg">{totalUnits}</p>
           </div>
 
           <div className="flex flex-col gap-0.5">
