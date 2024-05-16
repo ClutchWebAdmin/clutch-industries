@@ -2,10 +2,13 @@ import { oxanium } from "../styles/fonts";
 import { client } from "../../../sanity/lib/client";
 
 export default async function StatsSection() {
-  const data = await client.fetch(`*[_type == "projects"]{
+  const data = await client.fetch(
+    `*[_type == "projects"]{
     'squareFootage': projectDetails.squareFootage,
     'unitsObject': projectDetails.units
-  }`);
+  }`,
+    { next: { tags: ["stats"] } }
+  );
 
   const formatNumberWithCommas = (number) => {
     return number.toLocaleString();
