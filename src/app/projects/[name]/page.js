@@ -83,7 +83,8 @@ export default async function ProjectDetailsPage({ params }) {
       }
     }
   `,
-    { name }
+    { name },
+    { next: { tags: ["details"] } }
   );
 
   const projectDetails = data?.projectDetails[0];
