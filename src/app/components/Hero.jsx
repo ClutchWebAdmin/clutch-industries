@@ -8,7 +8,7 @@ export default function Hero() {
       <Image
         src={heroImage}
         alt="Hero image"
-        className="object-cover brightness-[.4]"
+        className="object-cover brightness-[.6]"
         fill
         priority
       />
