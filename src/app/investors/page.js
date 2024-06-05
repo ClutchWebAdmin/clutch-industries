@@ -43,8 +43,12 @@ export default async function InvestorsPage() {
                 <div className="flex w-full lg:w-1/2">Loading video...</div>
               )}
               <div className="flex flex-col w-full lg:w-1/2 gap-3">
-                <h3 className="text-2xl lg:text-4xl">{update.title}</h3>
-                <p className="text-clutchBlue-400">{formattedDate}</p>
+                <h3 className="text-2xl lg:text-4xl xl:text-5xl">
+                  {update.title}
+                </h3>
+                <p className="text-clutchBlue-400 text-sm">
+                  Posted on: {formattedDate}
+                </p>
                 <p>{update.shortParagraph}</p>
               </div>
             </div>
