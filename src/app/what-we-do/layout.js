@@ -14,7 +14,7 @@ export const metadata = {
     siteName: "Clutch Industries | Construction, Investment, Development",
     type: "website",
     locale: "en_US",
-    url: "https://clutchindustries.com",
+    url: "https://clutchindustries.com/what-we-do",
     images: [
       {
         url: "https://clutchindustries.com/images/og-image.png",
