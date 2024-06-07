@@ -11,6 +11,7 @@ export default function Hero() {
         className="object-cover brightness-[.6] z-20"
         fill
         priority
+        placeholder="blur"
       />
       <div className="absolute z-10 w-full h-svh flex bg-clutchBlue-800"></div>
       <div className="absolute z-30 w-full h-svh flex justify-start p-5 lg:p-10 items-end">
