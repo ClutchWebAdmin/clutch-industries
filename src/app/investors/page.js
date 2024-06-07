@@ -4,11 +4,11 @@ import TextAndLinkSection from "../components/TextAndLinkSection";
 export default async function InvestorsPage() {
   const data = await client.fetch(`
     *[_type == "investorUpdates"]{
-      _createdAt,
+      _updatedAt,
       title,
       video,
       shortParagraph
-    } | order(_createdAt desc)
+    } | order(_updatedAt desc)
   `);
 
   const investorData = data;
@@ -22,7 +22,7 @@ export default async function InvestorsPage() {
           </h2>
         </section>
         {investorData.map((update, index) => {
-          const date = new Date(update._createdAt);
+          const date = new Date(update._updatedAt);
           const formattedDate = date.toLocaleDateString("en-US", {
             year: "numeric",
             month: "long",
@@ -43,9 +43,7 @@ export default async function InvestorsPage() {
                 <div className="flex w-full lg:w-1/2">Loading video...</div>
               )}
               <div className="flex flex-col w-full lg:w-1/2 gap-3">
-                <h3 className="text-2xl lg:text-4xl xl:text-5xl">
-                  {update.title}
-                </h3>
+                <h3 className="text-2xl lg:text-4xl">{update.title}</h3>
                 <p className="text-clutchBlue-400 text-sm">
                   Posted on: {formattedDate}
                 </p>
