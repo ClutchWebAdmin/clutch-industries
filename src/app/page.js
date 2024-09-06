@@ -1,6 +1,6 @@
 import Hero from "./components/Hero";
 import ServicesDrawer from "./components/ServicesDrawer";
-import teamPhoto from "../../public/images/clutchteamphotosmall.jpg";
+import teamPhoto from "../../public/images/clutchteamphotosmall.png";
 import TheHomeHeader from "./components/Headers/TheHomeHeader";
 import StatsSection from "./components/StatsSection";
 import PhotoLeftTextRightSection from "./components/PhotoLeftTextRightSection";
