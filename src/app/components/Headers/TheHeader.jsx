@@ -41,7 +41,16 @@ export default function TheHeader() {
             linkTo="/projects"
           />
         </div>
-
+        <div
+          href="https://clutch.invportal.com/login"
+          className="hidden lg:flex flex-row items-center lg:w-1/5 flex-grow justify-end">
+          <a
+            href="https://clutch.invportal.com/login"
+            className="flex flex-nowrap pr-5 font-medium hover:text-clutchBlue-500"
+          >
+            Clutch Investors
+          </a>
+        </div>
         <div
           href="/"
           className="hidden lg:flex flex-row items-center lg:w-1/5 flex-grow justify-end"
