@@ -48,7 +48,7 @@ export default function TheHomeHeader() {
             href="https://clutch.invportal.com/login"
             className="flex flex-nowrap pr-5 font-medium hover:text-clutchBlue-500"
           >
-            Clutch Investors
+            Investor Portal
           </a>
         </div>
         <div

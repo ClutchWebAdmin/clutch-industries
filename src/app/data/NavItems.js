@@ -69,7 +69,7 @@ export const mobileArray = [
     linkTo: "/projects",
   },
   {
-    text: "Clutch Investors",
+    text: "Investor Portal",
     linkTo: "https://clutch.invportal.com"
   },
 ];
