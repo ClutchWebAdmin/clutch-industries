@@ -15,7 +15,7 @@ export default function TeamMemberCard({
       <Image
         src={photoUrl}
         alt={fullName}
-        className="w-full h-full object-cover"
+        className="w-full h-auto object-cover"
         blurDataURL={blurDataURL}
         height={height}
         width={width}
