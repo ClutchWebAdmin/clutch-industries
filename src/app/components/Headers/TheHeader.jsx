@@ -42,7 +42,6 @@ export default function TheHeader() {
           />
         </div>
         <div
-          href="https://clutch.invportal.com/login"
           className="hidden lg:flex flex-row items-center lg:w-1/5 flex-grow justify-end">
           <a
             href="https://clutch.invportal.com/login"
@@ -50,8 +49,8 @@ export default function TheHeader() {
           >
             Investor Portal
           </a>
-        </div>
-        <div
+          </div>
+          <div
           href="/"
           className="hidden lg:flex flex-row items-center lg:w-1/5 flex-grow justify-end"
         >
@@ -61,6 +60,11 @@ export default function TheHeader() {
           >
             503-967-5228
           </a>
+          </div>
+        <div
+          href="/"
+          className="hidden lg:flex flex-row items-center lg:w-1/5 flex-grow justify-end"
+        >
           <PrimaryContactButton buttonText="Contact" />
         </div>
         <MobileMenu />
