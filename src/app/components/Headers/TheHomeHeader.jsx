@@ -42,7 +42,7 @@ export default function TheHomeHeader() {
           />
         </div>
         <div
-          href="https://clutch.invportal.com/login"
+          // href="https://clutch.invportal.com/login"
           className="hidden lg:flex flex-row items-center lg:w-1/5 flex-grow justify-end">
           <a
             href="https://clutch.invportal.com/login"
@@ -61,6 +61,11 @@ export default function TheHomeHeader() {
           >
             503-967-5228
           </a>
+        </div>  
+        <div
+          href="/"
+          className="hidden lg:flex flex-row items-center lg:w-1/5 flex-grow justify-end"
+        >
           <SecondaryContactButton buttonText="Contact" />
         </div>
         <MobileMenu />

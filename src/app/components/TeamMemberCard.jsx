@@ -11,11 +11,13 @@ export default function TeamMemberCard({
   width,
 }) {
   return (
-    <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+    <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true"
+    // className="w-fit h-full object-cover"
+    >
       <Image
         src={photoUrl}
         alt={fullName}
-        className="w-full h-full object-cover"
+        className="md:w-80 md:h-96 sm:h-72 object-cover"
         blurDataURL={blurDataURL}
         height={height}
         width={width}

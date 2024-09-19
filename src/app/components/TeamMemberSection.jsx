@@ -28,7 +28,7 @@ export default async function TeamMemberSection() {
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-6 md:gap-10">
         {teamMembersArray.map((member, index) => (
-          <figure key={index} className="flex relative col-span-1 shadow-lg">
+          <figure key={index} className="flex relative col-span-1 ">
             <TeamMemberCard
               fullName={member.fullName}
               photoUrl={member.imageUrl}
