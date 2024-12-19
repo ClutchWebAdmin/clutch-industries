@@ -27,7 +27,7 @@ export default function NavDropdown({ mainLinkText, linkTo, dropdownArray }) {
     >
       <button
         onClick={togglePropertiesDropdown}
-        className=" hover:text-clutchBlue-500 flex flex-row items-center gap-2 p-2 uppercase"
+        className=" hover:text-clutchBlue-950 flex flex-row items-center gap-2 p-2 uppercase"
         aria-label="Open dropdown menu"
       >
         <Link href={linkTo}>{mainLinkText}</Link>
@@ -36,13 +36,13 @@ export default function NavDropdown({ mainLinkText, linkTo, dropdownArray }) {
         </div>
       </button>
       {showDropdown && (
-        <div className="absolute top-full left-0 bg-white shadow-md p-2">
+        <div className="absolute top-full left-0 bg-white shadow-md p-2 rounded-md">
           <div className="flex flex-col w-[180px]">
             {dropdownArray.map((item, index) => (
               <Link
                 key={index}
                 href={item.linkTo}
-                className="border border-transparent hover:border hover:border-clutchBlue-500 hover:text-clutchBlue-500 p-2"
+                className="border rounded-sm border-transparent hover:border-clutchBlue-950 hover:text-clutchBlue-950 p-2 shadow-md shadow-transparent hover:shadow-clutchBlue-950"
                 aria-label="Nav item"
               >
                 {item.text}

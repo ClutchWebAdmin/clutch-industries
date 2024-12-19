@@ -15,12 +15,12 @@ export default function PropertyCard({ project }) {
           width={project.width}
           placeholder="blur"
           blurDataURL={project.blurDataURL}
-          className="w-auto h-fit object-cover"
+          className="w-auto h-fit object-cover  rounded-t-lg"
         />
-        <p className="absolute top-0 right-0 bg-clutchBlue-100 px-4 py-2 uppercase font-medium">
+        <p className="absolute top-0 right-0 bg-clutchBlue-100 px-4 py-2 uppercase font-medium rounded-tr-lg rounded-bl-lg">
           {project.status}
         </p>
-        <div className="flex flex-col gap-0.5 bg-clutchBlue-900 backdrop-blur-md w-full h-fit px-4 py-4 relative">
+        <div className="flex flex-col gap-0.5 bg-clutchBlue-900 backdrop-blur-md w-full h-fit px-4 py-4 relative drop-shadow-xl shadow-black rounded-b-lg">
           <h5 className="font-medium 2xl:text-xl text-white">
             {project.projectTitle}
           </h5>

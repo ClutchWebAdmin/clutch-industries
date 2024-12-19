@@ -49,10 +49,10 @@ export const ourProjectsArray = [
     text: "Commercial",
     linkTo: "/projects/#commercial",
   },
-  // {
-  //   text: "Latest",
-  //   linkTo: "/projects/#latest",
-  // },
+  {
+    text: "Latest",
+    linkTo: "/projects/#latest",
+  },
 ];
 
 export const mobileArray = [

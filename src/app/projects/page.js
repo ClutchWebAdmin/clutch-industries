@@ -11,7 +11,7 @@ export default function ProjectsPage() {
         <ProjectsSection queryFilter="Residential" id="residential" />
         <ProjectsSection queryFilter="Mixed-Use" id="mixed-use" />
         <ProjectsSection queryFilter="Commercial" id="commercial" />
-        {/* <ProjectsSection queryFilter="Latest" id="latest" /> */}
+        <ProjectsSection queryFilter="Latest" id="latest" />
       </div>
       <TextAndLinkSection
         heading="Want to work with us?"

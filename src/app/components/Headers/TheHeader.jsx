@@ -18,10 +18,10 @@ export default function TheHeader() {
       <nav className="flex flex-row w-full h-fit lg:items-center justify-between m-5">
         <Link
           href="/"
-          className="lg:w-1/5 flex-grow"
+          className="lg:w-2/5 flex-grow"
           aria-label="Go to home page"
         >
-          <ClutchLogoSVG color1="#000000" color2="#2e3f8e" />
+          <ClutchLogoSVG color1="#000000" color2="#38bdf8" />
         </Link>
 
         <div className="hidden lg:flex flex-row items-center justify-center gap-6 lg:gap-2 xl:gap-8 lg:w-3/5 max-w-fit">
@@ -45,7 +45,7 @@ export default function TheHeader() {
           className="hidden lg:flex flex-row items-center lg:w-1/5 flex-grow justify-end">
           <a
             href="https://clutch.invportal.com/login"
-            className="flex flex-nowrap pr-5 font-medium hover:text-clutchBlue-500"
+            className="flex flex-nowrap pr-5 font-medium hover:text-clutchBlue-950"
           >
             Investor Portal
           </a>
@@ -56,7 +56,7 @@ export default function TheHeader() {
         >
           <a
             href="tel:+15039675228"
-            className="flex flex-nowrap pr-5 font-medium hover:text-clutchBlue-500"
+            className="flex flex-nowrap pr-5 font-medium hover:text-clutchBlue-950"
           >
             503-967-5228
           </a>

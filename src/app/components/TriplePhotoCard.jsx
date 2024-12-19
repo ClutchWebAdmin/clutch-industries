@@ -12,18 +12,18 @@ export default function TriplePhotoCard({ imageUrl, linkTo, heading }) {
   return (
     <Link
       href={linkTo}
-      className="flex flex-col w-full max-w-full lg:w-1/3 lg:max-w-1/3 hover:brightness-105 relative transition-all duration-500"
+      className="flex flex-col w-full max-w-full lg:w-1/3 lg:max-w-1/3 hover:brightness-105 relative transition-all duration-500 border border-white"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <Image
         src={imageUrl}
         alt={heading}
-        className="w-full h-auto object-cover"
+        className="w-full h-auto object-cover rounded-t-lg"
       />
 
       <div
-        className={`flex flex-row gap-2 items-center px-4 py-4 text-xl backdrop-blur-md text-white w-full justify-start absolute bottom-0 ${
+        className={`flex flex-row gap-2 items-center px-4 py-4 text-xl backdrop-blur-md text-white w-full justify-start absolute bottom-0 rounded-t-lg${
           isHovered ? "bg-clutchBlue-900/80" : ""
         }`}
       >

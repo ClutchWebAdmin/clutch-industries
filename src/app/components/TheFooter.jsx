@@ -25,7 +25,7 @@ export default function TheFooter() {
       <div className="grid gap-12 lg:gap-x-0 lg:gap-y-12 grid-cols-2 lg:grid-cols-4 xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto">
         <div className="flex flex-col gap-10 justify-between col-span-2 lg:col-span-1">
           <Link href="/">
-            <ClutchLogoSVG color1="#FFFFFF" color2="#7d88d5" />
+            <ClutchLogoSVG color1="#FFFFFF" color2="#38bdf8" />
           </Link>
           <div className="flex flex-col gap-4 text-xl">
             <div className="flex flex-row items-start gap-3">
@@ -33,7 +33,7 @@ export default function TheFooter() {
               <a
                 href="https://maps.app.goo.gl/T4G1YyNEN6DVYq7d9"
                 target="_blank"
-                className="text-base hover:text-clutchBlue-200"
+                className="text-base hover:text-sky-300"
                 id="map-icon"
                 aria-label="Go to google maps"
               >
@@ -44,7 +44,7 @@ export default function TheFooter() {
             <div className="flex flex-row items-center gap-3">
               <FaPhone />
               <a
-                className="text-base hover:text-clutchBlue-200"
+                className="text-base hover:text-sky-300"
                 href="tel:+15039675228"
                 target="_blank"
                 id="phone-icon"
@@ -56,7 +56,7 @@ export default function TheFooter() {
             <div className="flex flex-row items-center gap-3">
               <MdEmail />
               <a
-                className="text-base hover:text-clutchBlue-200"
+                className="text-base hover:text-sky-300"
                 href="mailto:office@clutchindustries.com"
                 target="_blank"
                 id="email-icon"
@@ -70,7 +70,7 @@ export default function TheFooter() {
           <div className="text-3xl flex flex-row gap-5">
             <a
               href="https://www.linkedin.com/company/clutch-industries-inc/"
-              className="hover:text-clutchBlue-200"
+              className="hover:text-clutchBlue-950"
               target="_blank"
               id="linkedin-icon"
               aria-label="Find us on LinkedIn"
@@ -79,7 +79,7 @@ export default function TheFooter() {
             </a>
             <a
               href="https://www.facebook.com/Clutch.Industries.Oregon/"
-              className="hover:text-clutchBlue-200"
+              className="hover:text-clutchBlue-950"
               target="_blank"
               id="facebook-icon"
               aria-label="Find us on Facebook"
@@ -88,7 +88,7 @@ export default function TheFooter() {
             </a>
             <a
               href="https://twitter.com/clutch90588373"
-              className="hover:text-clutchBlue-200"
+              className="hover:text-clutchBlue-950"
               target="_blank"
               id="twitter-icon"
               aria-label="Find us on Twitter"
@@ -97,7 +97,7 @@ export default function TheFooter() {
             </a>
             <a
               href="https://www.instagram.com/theclutchindustries/"
-              className="hover:text-clutchBlue-200"
+              className="hover:text-clutchBlue-950"
               target="_blank"
               id="instagram-icon"
               aria-label="Find us on Instagram"
@@ -110,14 +110,14 @@ export default function TheFooter() {
         <div className="flex flex-col gap-y-3 col-span-1 lg:mx-auto">
           <Link
             href="/who-we-are"
-            className="text-xl font-medium uppercase text-clutchBlue-300"
+            className="text-xl font-medium uppercase text-clutchBlue-950"
           >
             Who We Are
           </Link>
           <ul className="flex flex-col gap-2">
             {whoWeAreArray.map((item, index) => (
               <li key={index}>
-                <Link className="hover:text-clutchBlue-200" href={item.linkTo}>
+                <Link className="hover:text-sky-300" href={item.linkTo}>
                   {item.text}
                 </Link>
               </li>
@@ -128,14 +128,14 @@ export default function TheFooter() {
         <div className="flex flex-col gap-y-3 col-span-1 lg:mx-auto">
           <Link
             href="/what-we-do"
-            className="text-xl font-medium uppercase text-clutchBlue-300"
+            className="text-xl font-medium uppercase text-clutchBlue-950"
           >
             What We Do
           </Link>
           <ul className="flex flex-col gap-2">
             {whatWeDoArray.map((item, index) => (
               <li key={index}>
-                <Link className="hover:text-clutchBlue-200" href={item.linkTo}>
+                <Link className="hover:text-sky-300" href={item.linkTo}>
                   {item.text}
                 </Link>
               </li>
@@ -146,14 +146,14 @@ export default function TheFooter() {
         <div className="flex flex-col gap-y-3 col-span-2 lg:col-span-1 lg:mx-auto">
           <Link
             href="/projects"
-            className="text-xl font-medium uppercase text-clutchBlue-300"
+            className="text-xl font-medium uppercase text-clutchBlue-950"
           >
             Our Projects
           </Link>
           <ul className="flex flex-col gap-2">
             {ourProjectsArray.map((item, index) => (
               <li key={index}>
-                <Link className="hover:text-clutchBlue-200" href={item.linkTo}>
+                <Link className="hover:text-sky-300" href={item.linkTo}>
                   {item.text}
                 </Link>
               </li>
@@ -164,7 +164,7 @@ export default function TheFooter() {
         <div className="flex flex-col gap-2 col-span-full text-center text-xs">
           <Link
             href="/terms"
-            className="hover:text-clutchBlue-300 transition duration-300"
+            className="hover:text-sky-300 transition duration-300"
           >
             Terms of Service
           </Link>
