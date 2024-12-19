@@ -29,7 +29,7 @@ export default async function ProjectsSection({ queryFilter, id }) {
         {queryFilter} Properties
       </h4>
       {projectData.map((project, index) => (
-        <div key={index} className="col-span-1">
+        <div key={index} className="col-span-1 rounded-md shadow-md shadow-black">
           <PropertyCard project={project} />
         </div>
       ))}

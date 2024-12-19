@@ -57,7 +57,7 @@ export default function PhotoLeftTextRightSection({
       >
         <div className="flex flex-col gap-6 lg:gap-10 lg:flex-row px-5 lg:px-10 xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto">
           <div
-            className="flex w-full lg:w-1/2"
+            className="flex w-full lg:w-1/2 shadow-md shadow-black rounded-lg"
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-once="true"
@@ -65,7 +65,7 @@ export default function PhotoLeftTextRightSection({
             <Image
               src={photoUrl}
               alt={altText}
-              className="object-cover w-full h-auto mx-auto"
+              className="object-cover w-full h-auto mx-auto rounded-lg"
             />
           </div>
           <div

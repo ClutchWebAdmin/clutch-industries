@@ -1,6 +1,12 @@
 import Image from "next/image";
 import heroImage from "../../../public/images/hero-image.webp";
 import SecondaryLinkButton from "./Buttons/SecondaryLinkButton";
+import { Oxanium } from 'next/font/google';
+
+const oxanium = Oxanium({
+  subsets: ['latin'], // Add other subsets if needed
+  weight: ['400', '600', '700'], // Define font weights
+});
 
 export default function Hero() {
   return (
@@ -21,7 +27,7 @@ export default function Hero() {
           data-aos-duration="1500"
           data-aos-once="true"
         >
-          <h1 className="flex text-3xl font-medium leading-normal md:font-normal md:text-6xl md:leading-normal lg:text-6xl lg:leading-tight xl:text-7xl xl:leading-[1.1] 2xl:text-8xl 2xl:leading-tight">
+          <h1 className={`${oxanium.className} flex text-3xl font-medium leading-normal md:font-normal md:text-6xl md:leading-normal lg:text-6xl lg:leading-tight xl:text-7xl xl:leading-[1.1] 2xl:text-8xl 2xl:leading-tight`}>
             Your full service
             <br />
             construction experts

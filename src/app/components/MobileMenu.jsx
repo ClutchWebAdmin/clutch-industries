@@ -49,7 +49,7 @@ export default function MobileMenu() {
           id="close-mobile-menu"
           aria-label="close-mobile-menu"
           onClick={toggleMobileMenu}
-          className="lg:hidden absolute top-5 right-5 z-[9998] animate__animated animate__rotateIn"
+          className="lg:hidden absolute top-5 right-5 z-[9998] animate__animated animate__rotateIn transition duration-300 rounded-sm hover:text-sky-300 text-white hover:ring-2 ring-clutchBlue-950 ring-offset-2"
         >
           <AiOutlineClose className="h-6 w-6 text-white" />
         </button>
@@ -59,7 +59,7 @@ export default function MobileMenu() {
         <div className="lg:hidden fixed inset-0 bg-clutchBlue-900 text-white font-medium uppercase bg-opacity-95 z-[9000] animate__animated animate__slideInDown">
           <div className="flex flex-col h-full justify-center space-y-12 items-center text-xl">
             {mobileArray.map((item, index) => (
-              <Link key={index} href={item.linkTo} onClick={toggleMobileMenu}>
+              <Link key={index} href={item.linkTo} onClick={toggleMobileMenu} className="hover:text-sky-300 transition duration-300 rounded-sm text-white hover:ring-2 ring-clutchBlue-950 ring-offset-2 p-2">
                 {item.text}
               </Link>
             ))}

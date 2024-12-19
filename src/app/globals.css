@@ -5,6 +5,9 @@
 :root {
   --foreground-hex: #111940;
   --background-hex: #ffffff;
+  --primaryBlue: rgb(15 23 42);
+  --secondaryBlue: rgb(56, 189, 248);
+  --highlight: rgb(87, 210, 255);
 }
 
 body {
@@ -21,7 +24,9 @@ main {
   width: 100%;
 }
 
-h1,
+h1 {
+  font-family: var(--font-oxanium), sans-serif;
+}
 h2,
 h3,
 h4,

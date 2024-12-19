@@ -16,7 +16,7 @@ export default function Breadcrumbs() {
         <li>
           <Link
             href="/"
-            className="hover:text-clutchBlue-400 transition duration-200"
+            className="hover:text-clutchBlue-950 transition duration-200"
           >
             Home{" "}
           </Link>
@@ -26,7 +26,7 @@ export default function Breadcrumbs() {
             <span> / </span>
             <Link
               href={`/${pathSegments.slice(0, index + 1).join("/")}`}
-              className="hover:text-clutchBlue-400 transition duration-200"
+              className="hover:text-clutchBlue-950 transition duration-200"
             >
               {segment.replace(/-/g, " ")}
             </Link>

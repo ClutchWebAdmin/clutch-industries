@@ -18,7 +18,7 @@ export default function TimelineEvent({ variant, timelineEvent }) {
         data-aos-once="true"
       >
         <div className="flex justify-end text-right w-1/2 py-5 pr-6 lg:pr-10 relative">
-          <div className="absolute top-0 right-0 w-fit h-fit p-2 rounded-full box-border border-2 border-clutchBlue-300 -mx-5 lg:-mx-6 my-3 lg:my-2.5 bg-clutchBlue-100 text-clutchBlue-900 flex justify-center items-center">
+          <div className="absolute top-0 right-0 w-fit h-fit p-2 rounded-full box-border border-2 border-clutchBlue-100 -mx-5 lg:-mx-6 my-3 lg:my-2.5 bg-clutchBlue-1000 text-sky-200 flex justify-center items-center">
             <LuShovel className="text-lg lg:text-3xl" />
           </div>
           <div className="flex flex-col gap-4 w-full">
@@ -28,7 +28,7 @@ export default function TimelineEvent({ variant, timelineEvent }) {
             <Image
               src={`${timelineEvent.imageUrl}?w=600`}
               alt={timelineEvent.projectTitle}
-              className="object-cover w-full h-auto"
+              className="object-cover w-full h-auto shadow-md shadow-black rounded-lg"
               blurDataURL={timelineEvent.blurDataURL}
               height={timelineEvent.height}
               width={timelineEvent.width}
@@ -57,7 +57,7 @@ export default function TimelineEvent({ variant, timelineEvent }) {
       >
         <div className="lg:w-1/2"></div>
         <div className="flex justify-start text-left w-full lg:w-1/2 py-5 pl-16 lg:pl-10 relative">
-          <div className="absolute top-0 left-0 w-fit h-fit p-2 rounded-full box-border border-2 border-clutchBlue-300 mx-3.5 lg:-mx-6 my-3 lg:my-2.5 bg-clutchBlue-100 text-clutchBlue-900 flex justify-center items-center">
+          <div className="absolute top-0 left-0 w-fit h-fit p-2 rounded-full box-border border-2 border-clutchBlue-100 mx-3.5 lg:-mx-6 my-3 lg:my-2.5 bg-clutchBlue-1000 text-sky-200 flex justify-center items-center">
             <LuShovel className="text-lg lg:text-3xl" />
           </div>
           <div className="flex flex-col gap-4 w-full">
@@ -67,7 +67,7 @@ export default function TimelineEvent({ variant, timelineEvent }) {
             <Image
               src={`${timelineEvent.imageUrl}?w=600`}
               alt={timelineEvent.projectTitle}
-              className="object-cover w-full h-auto"
+              className="object-cover w-full h-auto shadow-md shadow-black rounded-lg"
               placeholder="blur"
               blurDataURL={timelineEvent.blurDataURL}
               height={timelineEvent.height}

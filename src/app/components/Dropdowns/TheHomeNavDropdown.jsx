@@ -31,7 +31,7 @@ export default function TheHomeNavDropdown({
     >
       <button
         onClick={togglePropertiesDropdown}
-        className=" hover:text-clutchBlue-200 flex flex-row items-center gap-2 p-2 uppercase"
+        className=" hover:text-clutchBlue-950 flex flex-row items-center gap-2 p-2 uppercase"
       >
         <Link href={linkTo}>{mainLinkText}</Link>
         <div>
@@ -40,15 +40,14 @@ export default function TheHomeNavDropdown({
       </button>
       {showDropdown && (
         <div
-          className="absolute top-full left-0 bg-white/5 backdrop-blur-md
-         p-2"
+          className="absolute top-full left-0 bg-white/5 backdrop-blur-md p-2 rounded-md"
         >
           <div className="flex flex-col w-[180px]">
             {dropdownArray.map((item, index) => (
               <Link
                 key={index}
                 href={item.linkTo}
-                className="border border-transparent hover:border hover:border-clutchBlue-200 hover:text-clutchBlue-100 p-2"
+                className="border border-transparent rounded-sm hover:border hover:ring-2 ring-clutchBlue-950 ring-offset-2 hover:text-sky-300 p-2 transition duration-300"
               >
                 {item.text}
               </Link>
