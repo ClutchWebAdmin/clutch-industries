@@ -23,11 +23,11 @@ export default function TriplePhotoCard({ imageUrl, linkTo, heading }) {
       />
 
       <div
-        className={`flex flex-row gap-2 items-center px-4 py-4 text-xl backdrop-blur-md text-white w-full justify-start absolute bottom-0 rounded-t-lg${
+        className={`flex flex-row gap-2 items-center px-4 py-4 text-xl backdrop-blur-md text-white w-full justify-start absolute bottom-0 rounded-t-lg hover:bg-clutchBlue-900/80 ${
           isHovered ? "bg-clutchBlue-900/80" : ""
         }`}
       >
-        <h4 className={`${barlow.className} text-2xl lg:text-4xl`}>
+        <h4 className={`${barlow.className} text-2xl lg:text-4xl `}>
           {heading}
         </h4>
         <FaArrowRight
