@@ -97,7 +97,6 @@ export default function Home() {
           heading3="Mixed-Use Spaces"
           linkTo3="/projects/#mixed-use"
         />
-
         <TextAndLinkSection
           heading="Want to work with us?"
           buttonText="Get in touch"
