@@ -22,7 +22,7 @@ export default function TeamMemberCard({
         height={height}
         width={width}
       />
-      <div className="absolute flex flex-col gap-0.5 bottom-0 left-0 bg-clutchBlue-900/80 backdrop-blur-md w-full h-fit px-4 py-4 drop-shadow-xl shadow-black rounded-b-lg">
+      <div className="absolute flex flex-col gap-0.5 bottom-0 left-0 bg-clutchBlue-900/80 backdrop-blur-md w-full h-fit px-4 py-4 shadow-md shadow-black rounded-b-lg">
         <div className="flex flex-row items-center justify-between text-white text-sm md:text-base lg:text-xl">
           <h5 className="font-medium">{fullName}</h5>
           <a
