@@ -8,7 +8,6 @@ export default function TimelineEvent({ variant, timelineEvent }) {
     "en-US",
     { month: "long", year: "numeric" }
   );
-
   if (variant === "left") {
     return (
       <div
